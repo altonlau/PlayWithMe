@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,18 +65,95 @@
         <!--Item 3-->
         <scene sceneID="TD1-xk-S8m">
             <objects>
-                <viewController id="16t-t1-zt5" sceneMemberID="viewController">
+                <viewController id="16t-t1-zt5" customClass="SettingsViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fi8-Ll-f60">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="zoi-1v-g0w">
+                                <rect key="frame" x="10" y="88" width="394" height="314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-KQ-eYx">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="74"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="135-fl-4Ry" userLabel="name">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKu-a9-gER" userLabel="nameTextField">
+                                                <rect key="frame" x="0.0" y="44" width="394" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DKu-a9-gER" firstAttribute="leading" secondItem="ejK-KQ-eYx" secondAttribute="leading" id="2U8-43-QdP"/>
+                                            <constraint firstItem="135-fl-4Ry" firstAttribute="leading" secondItem="ejK-KQ-eYx" secondAttribute="leading" id="Odm-TY-zcB"/>
+                                            <constraint firstAttribute="trailing" secondItem="DKu-a9-gER" secondAttribute="trailing" id="U2B-bw-0cz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ICP-B6-QIz">
+                                        <rect key="frame" x="0.0" y="120" width="394" height="74"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI7-yT-daR" userLabel="sports">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCb-3Y-Nkn" userLabel="nameTextField">
+                                                <rect key="frame" x="0.0" y="44" width="394" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uCb-3Y-Nkn" firstAttribute="leading" secondItem="ICP-B6-QIz" secondAttribute="leading" id="boh-Xi-aax"/>
+                                            <constraint firstAttribute="trailing" secondItem="uCb-3Y-Nkn" secondAttribute="trailing" id="lLy-l8-3Kb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Imh-DY-y0J">
+                                        <rect key="frame" x="0.0" y="240" width="394" height="74"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discovery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v32-gb-9qn" userLabel="discovery">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="FLx-SO-Yzt">
+                                                <rect key="frame" x="-2" y="44" width="392.5" height="31"/>
+                                            </slider>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FLx-SO-Yzt" secondAttribute="trailing" constant="5.5" id="Jmb-Qv-G9c"/>
+                                            <constraint firstItem="FLx-SO-Yzt" firstAttribute="leading" secondItem="Imh-DY-y0J" secondAttribute="leading" id="t9s-Db-TNh"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29350463624309875" green="0.59664824731851507" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zoi-1v-g0w" firstAttribute="top" secondItem="Hm1-5A-bOX" secondAttribute="top" constant="44" id="9ha-od-Gqs"/>
+                            <constraint firstItem="Hm1-5A-bOX" firstAttribute="trailing" secondItem="zoi-1v-g0w" secondAttribute="trailing" constant="10" id="A5y-LU-pJk"/>
+                            <constraint firstItem="zoi-1v-g0w" firstAttribute="leading" secondItem="Hm1-5A-bOX" secondAttribute="leading" constant="10" id="TRS-O5-qvw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hm1-5A-bOX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 3" id="O98-0P-6yD"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="DKu-a9-gER" id="E4a-RQ-Sqw"/>
+                        <outlet property="sportsTextField" destination="uCb-3Y-Nkn" id="3vF-I2-zTb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7r-kk-dfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="98"/>
+            <point key="canvasLocation" x="-17.39130434782609" y="97.767857142857139"/>
         </scene>
     </scenes>
 </document>
