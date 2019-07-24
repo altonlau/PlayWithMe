@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="G5x-dx-x49">
+            <objects>
+                <viewController id="lzs-or-NKr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q5o-4b-HTn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6c8-ym-lqw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="v84-uM-FFs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Uz-7a-TBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272" y="202"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="IUg-pg-JAe">
+            <objects>
+                <viewController id="kBl-na-twZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5P-mv-yy1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QO5-Io-HTZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Nc2-Mn-rh7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5g-Gw-yDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272" y="-447"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sfo-f3-jZ6">
+            <objects>
+                <tabBarController id="SBc-kg-gr2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yoA-9o-I1t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kBl-na-twZ" kind="relationship" relationship="viewControllers" id="OMb-Qt-Iov"/>
+                        <segue destination="lzs-or-NKr" kind="relationship" relationship="viewControllers" id="VO8-vH-A75"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZW5-bS-RMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1191" y="-123"/>
+        </scene>
+    </scenes>
+</document>
