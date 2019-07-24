@@ -12,9 +12,6 @@
 		4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281422E8BE0D00D75784 /* LaunchScreen.storyboard */; };
 		4CF8281E22E8C2DC00D75784 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8281D22E8C2DC00D75784 /* MainViewController.swift */; };
 		4CF8282122E8DA3D00D75784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281F22E8DA3D00D75784 /* Main.storyboard */; };
-		5DC42BA322E901BB009C11E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA222E901BB009C11E9 /* User.swift */; };
-		5DC42BA522E90351009C11E9 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA422E90351009C11E9 /* Chat.swift */; };
-		5DC42BA722E90429009C11E9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA622E90429009C11E9 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
