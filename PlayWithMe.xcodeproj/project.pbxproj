@@ -13,6 +13,8 @@
 		4CF8281E22E8C2DC00D75784 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8281D22E8C2DC00D75784 /* MainViewController.swift */; };
 		4CF8282122E8DA3D00D75784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281F22E8DA3D00D75784 /* Main.storyboard */; };
 		5DC42BA322E901BB009C11E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA222E901BB009C11E9 /* User.swift */; };
+		5DC42BA522E90351009C11E9 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA422E90351009C11E9 /* Chat.swift */; };
+		5DC42BA722E90429009C11E9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA622E90429009C11E9 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,9 @@
 		4CF8281722E8BE0D00D75784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF8281D22E8C2DC00D75784 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4CF8282022E8DA3D00D75784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5DC42BA222E901BB009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = PlayWithMe/User.swift; sourceTree = SOURCE_ROOT; };
+		5DC42BA222E901BB009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = PlayWithMe/Models/User.swift; sourceTree = SOURCE_ROOT; };
+		5DC42BA422E90351009C11E9 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = PlayWithMe/Models/Chat.swift; sourceTree = SOURCE_ROOT; };
+		5DC42BA622E90429009C11E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = PlayWithMe/Models/Message.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,9 @@
 		4CF8280A22E8BE0C00D75784 /* PlayWithMe */ = {
 			isa = PBXGroup;
 			children = (
-				4CF8282422E8DA5E00D75784 /* Models */,
+				5DC42BA822E90A07009C11E9 /* Models */,
 				4CF8282222E8DA4700D75784 /* Resources */,
 				4CF8282322E8DA5600D75784 /* ViewControllers */,
-				4CF8282522E8DA6200D75784 /* Views */,
 				4CF8280B22E8BE0C00D75784 /* AppDelegate.swift */,
 				4CF8281722E8BE0D00D75784 /* Info.plist */,
 			);
@@ -84,19 +87,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		4CF8282422E8DA5E00D75784 /* Models */ = {
+		5DC42BA822E90A07009C11E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5DC42BA622E90429009C11E9 /* Message.swift */,
+				5DC42BA422E90351009C11E9 /* Chat.swift */,
 				5DC42BA222E901BB009C11E9 /* User.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		4CF8282522E8DA6200D75784 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +171,8 @@
 				4CF8281E22E8C2DC00D75784 /* MainViewController.swift in Sources */,
 				4CF8280C22E8BE0C00D75784 /* AppDelegate.swift in Sources */,
 				5DC42BA322E901BB009C11E9 /* User.swift in Sources */,
+				5DC42BA722E90429009C11E9 /* Message.swift in Sources */,
+				5DC42BA522E90351009C11E9 /* Chat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
