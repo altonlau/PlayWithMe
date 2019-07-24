@@ -12,7 +12,7 @@
 		4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281422E8BE0D00D75784 /* LaunchScreen.storyboard */; };
 		4CF8281E22E8C2DC00D75784 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8281D22E8C2DC00D75784 /* MainViewController.swift */; };
 		4CF8282122E8DA3D00D75784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281F22E8DA3D00D75784 /* Main.storyboard */; };
-		5DC42BA122E8FEA7009C11E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA022E8FEA7009C11E9 /* User.swift */; };
+		5DC42BA322E901BB009C11E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA222E901BB009C11E9 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		4CF8281722E8BE0D00D75784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF8281D22E8C2DC00D75784 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4CF8282022E8DA3D00D75784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5DC42BA022E8FEA7009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = SOURCE_ROOT; };
+		5DC42BA222E901BB009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = PlayWithMe/User.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		4CF8282422E8DA5E00D75784 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5DC42BA022E8FEA7009C11E9 /* User.swift */,
+				5DC42BA222E901BB009C11E9 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			files = (
 				4CF8281E22E8C2DC00D75784 /* MainViewController.swift in Sources */,
 				4CF8280C22E8BE0C00D75784 /* AppDelegate.swift in Sources */,
-				5DC42BA122E8FEA7009C11E9 /* User.swift in Sources */,
+				5DC42BA322E901BB009C11E9 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,6 @@
 //  Created by Stephen Lee on 7/24/19.
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
-
 import Foundation
 import CoreLocation
 
