@@ -1,5 +1,5 @@
 //
-//  UITableViewController+ItemRowView.swift
+//  UITableView+ItemRowView.swift
 //  PlayWithMe
 //
 //  Created by Alton Lau on 7/25/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITableViewController {
+extension UITableView {
   
   func itemRowView(for cell: UITableViewCell) -> ItemRowView? {
     return (cell.contentView.subviews.first as? XIBView)?.contentView as? ItemRowView

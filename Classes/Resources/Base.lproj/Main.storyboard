@@ -21,14 +21,94 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zjf-C5-u2g" kind="relationship" relationship="viewControllers" id="IUP-er-R4C"/>
-                        <segue destination="FeM-CT-ugJ" kind="relationship" relationship="viewControllers" id="cnf-m8-G8k"/>
-                        <segue destination="16t-t1-zt5" kind="relationship" relationship="viewControllers" id="4YT-Qc-u0C"/>
+                        <segue destination="Cgi-nF-sUn" kind="relationship" relationship="viewControllers" id="5aP-qi-j7D"/>
+                        <segue destination="zjf-C5-u2g" kind="relationship" relationship="viewControllers" id="tEX-oP-hkb"/>
+                        <segue destination="16t-t1-zt5" kind="relationship" relationship="viewControllers" id="UJv-cc-Iqs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZW5-bS-RMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-626" y="-630"/>
+        </scene>
+        <!--SearchViewController-->
+        <scene sceneID="cWH-rZ-YJr">
+            <objects>
+                <viewController title="SearchViewController" id="Cgi-nF-sUn" customClass="SearchViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aPc-gM-EeN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="uiH-Rp-YFn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Cgi-nF-sUn" id="Kws-ts-E4w"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G13-h9-Uqs">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCellIdentifier" id="AXe-6N-BvM">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AXe-6N-BvM" id="b1Y-Ie-VFd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hu-Ur-OVJ" customClass="XIBView" customModule="PlayWithMe" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="SearchItemRowView"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="0hu-Ur-OVJ" secondAttribute="trailing" id="5g6-lk-jqC"/>
+                                                <constraint firstItem="0hu-Ur-OVJ" firstAttribute="leading" secondItem="b1Y-Ie-VFd" secondAttribute="leading" id="7hA-TK-ugn"/>
+                                                <constraint firstItem="0hu-Ur-OVJ" firstAttribute="top" secondItem="b1Y-Ie-VFd" secondAttribute="top" id="ZdT-GL-AbY"/>
+                                                <constraint firstAttribute="bottom" secondItem="0hu-Ur-OVJ" secondAttribute="bottom" id="xNA-BK-sgd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cgi-nF-sUn" id="q5i-vO-6Hc"/>
+                                    <outlet property="delegate" destination="Cgi-nF-sUn" id="moi-Bh-znq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="uiH-Rp-YFn" firstAttribute="trailing" secondItem="SGf-dp-s8h" secondAttribute="trailing" id="6VT-JO-gAI"/>
+                            <constraint firstAttribute="bottom" secondItem="G13-h9-Uqs" secondAttribute="bottom" id="Jnj-77-8YI"/>
+                            <constraint firstItem="uiH-Rp-YFn" firstAttribute="leading" secondItem="SGf-dp-s8h" secondAttribute="leading" id="L8H-Xc-sEE"/>
+                            <constraint firstItem="G13-h9-Uqs" firstAttribute="leading" secondItem="SGf-dp-s8h" secondAttribute="leading" id="QW2-W1-7ru"/>
+                            <constraint firstItem="G13-h9-Uqs" firstAttribute="top" secondItem="uiH-Rp-YFn" secondAttribute="bottom" id="cXr-ha-gzg"/>
+                            <constraint firstItem="uiH-Rp-YFn" firstAttribute="top" secondItem="SGf-dp-s8h" secondAttribute="top" id="jJf-uG-JJ6"/>
+                            <constraint firstItem="G13-h9-Uqs" firstAttribute="trailing" secondItem="SGf-dp-s8h" secondAttribute="trailing" id="oBR-kO-BZR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SGf-dp-s8h"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="E3e-El-azu" appends="YES" id="bg5-sv-tO2"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="jZD-N0-GIj"/>
+                    <connections>
+                        <outlet property="searchBar" destination="uiH-Rp-YFn" id="v6K-bQ-ZHX"/>
+                        <outlet property="tableView" destination="G13-h9-Uqs" id="DI4-sl-Hea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PC8-9D-sSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="E3e-El-azu">
+                    <connections>
+                        <action selector="viewTapped:" destination="Cgi-nF-sUn" id="3PK-dY-d7W"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1236.231884057971" y="97.767857142857139"/>
         </scene>
         <!--ChatListViewController-->
         <scene sceneID="k1V-6N-eR2">
@@ -72,56 +152,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4O-1u-grJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1235" y="98"/>
-        </scene>
-        <!--SearchViewController-->
-        <scene sceneID="9FX-87-h9w">
-            <objects>
-                <tableViewController title="SearchViewController" id="FeM-CT-ugJ" customClass="SearchViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LMR-G1-f6F">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCellIdentifier" id="sU5-Yg-WRq">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sU5-Yg-WRq" id="B38-x0-mpS">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4z-20-huP" customClass="XIBView" customModule="PlayWithMe" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="SearchItemRowView"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Q4z-20-huP" firstAttribute="top" secondItem="B38-x0-mpS" secondAttribute="top" id="Ghi-uI-y4g"/>
-                                        <constraint firstAttribute="bottom" secondItem="Q4z-20-huP" secondAttribute="bottom" id="bhf-GR-g5u"/>
-                                        <constraint firstAttribute="trailing" secondItem="Q4z-20-huP" secondAttribute="trailing" id="cNo-fL-kjV"/>
-                                        <constraint firstItem="Q4z-20-huP" firstAttribute="leading" secondItem="B38-x0-mpS" secondAttribute="leading" id="oW3-vh-cEd"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FeM-CT-ugJ" id="HhV-ji-keb"/>
-                            <outlet property="delegate" destination="FeM-CT-ugJ" id="FTh-so-eJT"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="Hf9-Os-8jT"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lp0-Nm-Y39" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
             <point key="canvasLocation" x="-626" y="98"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--SettingsViewController-->
         <scene sceneID="TD1-xk-S8m">
             <objects>
-                <viewController id="16t-t1-zt5" customClass="SettingsViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SettingsViewController" id="16t-t1-zt5" customClass="SettingsViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fi8-Ll-f60">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
