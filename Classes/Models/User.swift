@@ -1,5 +1,5 @@
 //
-//  Group.swift
+//  User.swift
 //  PlayWithMe
 //
 //  Created by Stephen Lee on 7/24/19.
@@ -9,20 +9,47 @@
 import Foundation
 import CoreLocation
 
-struct User: CustomStringConvertible {
-    var description: String { return "\(id) \(name) \(location)"}
-
-    var id: String
-    var chatIds: [String]
-    var firstName: String
-    var lastName: String
-    var name: String {
-        return "\(firstName) \(lastName)"
-    }
-    var longitude: CLLocationDegrees
-    var latitude: CLLocationDegrees
-    var location: CLLocation {
-        return CLLocation(latitude: latitude, longitude: longitude)
+struct User {
+  
+  let id: Int
+  let firstName: String
+  let lastName: String
+  let latitude: CLLocationDegrees
+  let longitude: CLLocationDegrees
+  
+  var chatIds: [Int]
+  var name: String {
+    return "\(firstName) \(lastName)"
+  }
+  var location: CLLocation {
+    return CLLocation(latitude: latitude, longitude: longitude)
+  }
+  
+  init(json: [String : Any]) {
+    guard
+      let id = json["user_id"] as? Int,
+      let firstName = json["first_name"] as? String,
+      let lastName = json["last_name"] as? String,
+      let latitude = json["latitude"] as? Double,
+      let longitude = json["longitude"] as? Double,
+      let chatIds = json["chat_ids"] as? [Int] else {
+        fatalError()
     }
     
+    self.id = id
+    self.firstName = firstName
+    self.lastName = lastName
+    self.latitude = CLLocationDegrees(floatLiteral: latitude)
+    self.longitude = CLLocationDegrees(floatLiteral: longitude)
+    self.chatIds = chatIds
+  }
+  
+}
+
+extension User: CustomStringConvertible {
+  
+  var description: String {
+    return "\(id): \(name) \(location)"
+  }
+  
 }

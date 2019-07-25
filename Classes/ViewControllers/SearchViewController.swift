@@ -10,7 +10,12 @@ import UIKit
 
 class SearchViewController: UITableViewController {
   
-  private let reuseIdentifier = "SearchCellidentifier"
+  private let reuseIdentifier = "SearchCellIdentifier"
+  private var chats: [Chat] = []
+  
+  override func viewDidLoad() {
+    chats = MockLoader.loadChats()
+  }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 44
@@ -21,16 +26,19 @@ class SearchViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // Temporary until we get data
-    return 5
+    return chats.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // Temporary until we get data
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-//    guard let searchItemRowView = itemRowView(for: cell) as? SearchItemRowView else {
-//      return cell
-//    }
+    
+    if let searchItemRowView = itemRowView(for: cell) as? SearchItemRowView {
+      let chat = chats[indexPath.row]
+      searchItemRowView.titleLabel.text = chat.name
+      ImageLoader.load(chat.imageUrl) { searchItemRowView.imageView.image = $0 }
+    }
+    
     return cell
   }
   
