@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageKit
+import InputBarAccessoryView
 
 var messages: [Message] = [Message(
     member: Member(name: "bluemoon", color: .blue),
@@ -20,13 +21,29 @@ class MessageViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         member = Member(name: "bluemoon", color: .blue)
-        messagesCollectionView.messagesDataSource = self
-        messagesCollectionView.messagesLayoutDelegate = self
-        messageInputBar.delegate = self
+        configureMessageCollectionView()
+        configureMessageInputBar()
         messagesCollectionView.messagesDisplayDelegate = self
+        messagesCollectionView.messagesLayoutDelegate = self
+    }
+
+    func configureMessageCollectionView() {
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messageCellDelegate = self
+        scrollsToBottomOnKeyboardBeginsEditing = true // default false
+        maintainPositionOnKeyboardFrameChanged = true // default false
+    }
+    
+    func configureMessageInputBar() {
+        messageInputBar.delegate = self
+//        messageInputBar.inputTextView.tintColor = .primaryColor
+//        messageInputBar.sendButton.setTitleColor(.primaryColor, for: .normal)
+//        messageInputBar.sendButton.setTitleColor(
+//            UIColor.primaryColor.withAlphaComponent(0.3),
+//            for: .highlighted
+//        )
     }
 }
-
 extension MessageViewController: MessagesDataSource {
     func numberOfSections(
         in messagesCollectionView: MessagesCollectionView) -> Int {
@@ -86,11 +103,8 @@ extension MessageViewController: MessagesDisplayDelegate {
     }
 }
 
-extension MessageViewController: MessageInputBarDelegate {
-    func messageInputBar(
-        _ inputBar: MessageInputBar,
-        didPressSendButtonWith text: String) {
-        
+extension MessageViewController: InputBarAccessoryViewDelegate{
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         let newMessage = Message(
             member: member,
             text: text,
@@ -100,5 +114,40 @@ extension MessageViewController: MessageInputBarDelegate {
         inputBar.inputTextView.text = ""
         messagesCollectionView.reloadData()
         messagesCollectionView.scrollToBottom(animated: true)
+        
     }
+}
+
+extension MessageViewController: MessageCellDelegate {
+    
+    func didTapAvatar(in cell: MessageCollectionViewCell) {
+        print("Avatar tapped")
+    }
+    
+    func didTapMessage(in cell: MessageCollectionViewCell) {
+        print("Message tapped")
+    }
+    
+    func didTapCellTopLabel(in cell: MessageCollectionViewCell) {
+        print("Top cell label tapped")
+    }
+    
+    func didTapCellBottomLabel(in cell: MessageCollectionViewCell) {
+        print("Bottom cell label tapped")
+    }
+    
+    func didTapMessageTopLabel(in cell: MessageCollectionViewCell) {
+        print("Top message label tapped")
+    }
+    
+    func didTapMessageBottomLabel(in cell: MessageCollectionViewCell) {
+        print("Bottom label tapped")
+    }
+    
+   
+    
+    func didTapAccessoryView(in cell: MessageCollectionViewCell) {
+        print("Accessory view tapped")
+    }
+    
 }
