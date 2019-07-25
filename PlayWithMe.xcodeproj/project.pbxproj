@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,12 @@
 		4CF8281322E8BE0D00D75784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281222E8BE0D00D75784 /* Assets.xcassets */; };
 		4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281422E8BE0D00D75784 /* LaunchScreen.storyboard */; };
 		4CF8282122E8DA3D00D75784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281F22E8DA3D00D75784 /* Main.storyboard */; };
+		5D423D0C22EA3DF900E0F122 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */; };
+		5D423D0D22EA444200E0F122 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA222E901BB009C11E9 /* Chat.swift */; };
+		5D423D0E22EA444400E0F122 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA622E90429009C11E9 /* Message.swift */; };
+		5D423D0F22EA444700E0F122 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA422E90351009C11E9 /* User.swift */; };
 		5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7439F422E91C3F003845BC /* SettingsViewController.swift */; };
+		D6EAB1C2E5BF7841EFA991A4 /* libPods-PlayWithMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7580B0BE53D9F2560E150B /* libPods-PlayWithMe.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +40,14 @@
 		4CF8281522E8BE0D00D75784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CF8281722E8BE0D00D75784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF8282022E8DA3D00D75784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		5D7439F422E91C3F003845BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5DC42BA222E901BB009C11E9 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = PlayWithMe/Models/Chat.swift; sourceTree = SOURCE_ROOT; };
 		5DC42BA422E90351009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = PlayWithMe/Models/User.swift; sourceTree = SOURCE_ROOT; };
 		5DC42BA622E90429009C11E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = PlayWithMe/Models/Message.swift; sourceTree = SOURCE_ROOT; };
+		AC7580B0BE53D9F2560E150B /* libPods-PlayWithMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlayWithMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC689E4BCDDC9938DDEE793 /* Pods-PlayWithMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMe.debug.xcconfig"; path = "Target Support Files/Pods-PlayWithMe/Pods-PlayWithMe.debug.xcconfig"; sourceTree = "<group>"; };
+		F33923E227D012FF678C57F9 /* Pods-PlayWithMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMe.release.xcconfig"; path = "Target Support Files/Pods-PlayWithMe/Pods-PlayWithMe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,12 +55,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6EAB1C2E5BF7841EFA991A4 /* libPods-PlayWithMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06824B35F99D2F15BD3596E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECC689E4BCDDC9938DDEE793 /* Pods-PlayWithMe.debug.xcconfig */,
+				F33923E227D012FF678C57F9 /* Pods-PlayWithMe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4CA45C1A22E91CBA00AB101C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +86,8 @@
 			children = (
 				4CF8280A22E8BE0C00D75784 /* PlayWithMe */,
 				4CF8280922E8BE0C00D75784 /* Products */,
+				06824B35F99D2F15BD3596E0 /* Pods */,
+				5820EC2CC617D42C4FD8B7A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,8 +130,17 @@
 				4CA45C1122E9075600AB101C /* ChatListViewController.swift */,
 				4C708BF922EA275E0021B4B9 /* SearchViewController.swift */,
 				5D7439F422E91C3F003845BC /* SettingsViewController.swift */,
+				5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5820EC2CC617D42C4FD8B7A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC7580B0BE53D9F2560E150B /* libPods-PlayWithMe.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5DC42BA822E90A07009C11E9 /* Models */ = {
@@ -130,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CF8281A22E8BE0D00D75784 /* Build configuration list for PBXNativeTarget "PlayWithMe" */;
 			buildPhases = (
+				DC94F1ED04F959C393095773 /* [CP] Check Pods Manifest.lock */,
 				4CF8280422E8BE0C00D75784 /* Sources */,
 				4CF8280522E8BE0C00D75784 /* Frameworks */,
 				4CF8280622E8BE0C00D75784 /* Resources */,
+				9BB7452926430CF387DC8F16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +223,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9BB7452926430CF387DC8F16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlayWithMe/Pods-PlayWithMe-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlayWithMe/Pods-PlayWithMe-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlayWithMe/Pods-PlayWithMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC94F1ED04F959C393095773 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlayWithMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4CF8280422E8BE0C00D75784 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -198,11 +272,15 @@
 			files = (
 				4CA45C1222E9075600AB101C /* ChatListViewController.swift in Sources */,
 				4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */,
+				5D423D0C22EA3DF900E0F122 /* MessageViewController.swift in Sources */,
 				4CF8280C22E8BE0C00D75784 /* AppDelegate.swift in Sources */,
+				5D423D0D22EA444200E0F122 /* Chat.swift in Sources */,
 				5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */,
 				4CA45C1E22E91CBA00AB101C /* ChatItemRowView.swift in Sources */,
+				5D423D0E22EA444400E0F122 /* Message.swift in Sources */,
 				4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */,
 				4CA45C1D22E91CBA00AB101C /* XIBView.swift in Sources */,
+				5D423D0F22EA444700E0F122 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +380,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -356,12 +435,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		4CF8281B22E8BE0D00D75784 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECC689E4BCDDC9938DDEE793 /* Pods-PlayWithMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -373,13 +454,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yelp.PlayWithMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		4CF8281C22E8BE0D00D75784 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F33923E227D012FF678C57F9 /* Pods-PlayWithMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -391,7 +472,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yelp.PlayWithMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
