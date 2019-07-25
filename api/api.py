@@ -23,7 +23,16 @@ def get_user(user_id):
   result = json.loads(connection.getresponse().read())
   print result['results'][0]
 
+def get_chat(chat_id):
+  #Returns the user object
+  url = '/classes/Users?where={"chat_id":' + str(chat_id)+'}'
+  connection.request('GET', url ,'', {
+       "X-Parse-Application-Id": "OUS5D6T6Hf9C6yW6SJMOgWGIfaw7gZRbVHSMAfZi",
+       "X-Parse-REST-API-Key": "uyWgbdC2Y0sXFxS3H7SQt8cn0GkKigwSgwTzCybM"
+     })
+  result = json.loads(connection.getresponse().read())
+  print result
 
 
 
-
+get_chat(1)
