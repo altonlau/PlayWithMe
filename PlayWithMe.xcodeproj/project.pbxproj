@@ -10,6 +10,11 @@
 		4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BF422EA18550021B4B9 /* SearchItemRowView.swift */; };
 		4C708BF822EA1D530021B4B9 /* SearchItemRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C708BF622EA1D530021B4B9 /* SearchItemRowView.xib */; };
 		4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BF922EA275E0021B4B9 /* SearchViewController.swift */; };
+		4C708BFC22EA30600021B4B9 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA222E901BB009C11E9 /* Chat.swift */; };
+		4C708BFD22EA30680021B4B9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA622E90429009C11E9 /* Message.swift */; };
+		4C708BFE22EA306A0021B4B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA422E90351009C11E9 /* User.swift */; };
+		4C708C0022EA33150021B4B9 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BFF22EA33150021B4B9 /* ItemRowView.swift */; };
+		4C708C0322EA35650021B4B9 /* UITableViewController+ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708C0222EA35650021B4B9 /* UITableViewController+ItemRowView.swift */; };
 		4CA45C0E22E8FC7B00AB101C /* ChatItemRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA45C0C22E8FC7B00AB101C /* ChatItemRowView.xib */; };
 		4CA45C1222E9075600AB101C /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA45C1122E9075600AB101C /* ChatListViewController.swift */; };
 		4CA45C1D22E91CBA00AB101C /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA45C1B22E91CBA00AB101C /* XIBView.swift */; };
@@ -25,6 +30,8 @@
 		4C708BF422EA18550021B4B9 /* SearchItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemRowView.swift; sourceTree = "<group>"; };
 		4C708BF722EA1D530021B4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchItemRowView.xib; sourceTree = "<group>"; };
 		4C708BF922EA275E0021B4B9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4C708BFF22EA33150021B4B9 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
+		4C708C0222EA35650021B4B9 /* UITableViewController+ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+ItemRowView.swift"; sourceTree = "<group>"; };
 		4CA45C0D22E8FC7B00AB101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChatItemRowView.xib; sourceTree = "<group>"; };
 		4CA45C1122E9075600AB101C /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		4CA45C1B22E91CBA00AB101C /* XIBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
@@ -36,9 +43,9 @@
 		4CF8281722E8BE0D00D75784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF8282022E8DA3D00D75784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D7439F422E91C3F003845BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		5DC42BA222E901BB009C11E9 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = PlayWithMe/Models/Chat.swift; sourceTree = SOURCE_ROOT; };
-		5DC42BA422E90351009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = PlayWithMe/Models/User.swift; sourceTree = SOURCE_ROOT; };
-		5DC42BA622E90429009C11E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = PlayWithMe/Models/Message.swift; sourceTree = SOURCE_ROOT; };
+		5DC42BA222E901BB009C11E9 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Classes/Models/Chat.swift; sourceTree = SOURCE_ROOT; };
+		5DC42BA422E90351009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/Models/User.swift; sourceTree = SOURCE_ROOT; };
+		5DC42BA622E90429009C11E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Classes/Models/Message.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C708C0122EA35500021B4B9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4C708C0222EA35650021B4B9 /* UITableViewController+ItemRowView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4CA45C1A22E91CBA00AB101C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4CA45C1C22E91CBA00AB101C /* ChatItemRowView.swift */,
+				4C708BFF22EA33150021B4B9 /* ItemRowView.swift */,
 				4C708BF422EA18550021B4B9 /* SearchItemRowView.swift */,
 				4CA45C1B22E91CBA00AB101C /* XIBView.swift */,
 			);
@@ -65,7 +81,8 @@
 		4CF827FF22E8BE0C00D75784 = {
 			isa = PBXGroup;
 			children = (
-				4CF8280A22E8BE0C00D75784 /* PlayWithMe */,
+				4CF8280A22E8BE0C00D75784 /* Classes */,
+				4CF8281722E8BE0D00D75784 /* Info.plist */,
 				4CF8280922E8BE0C00D75784 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,17 +95,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4CF8280A22E8BE0C00D75784 /* PlayWithMe */ = {
+		4CF8280A22E8BE0C00D75784 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				5DC42BA822E90A07009C11E9 /* Models */,
 				4CF8282222E8DA4700D75784 /* Resources */,
+				4C708C0122EA35500021B4B9 /* Utils */,
 				4CF8282322E8DA5600D75784 /* ViewControllers */,
 				4CA45C1A22E91CBA00AB101C /* Views */,
 				4CF8280B22E8BE0C00D75784 /* AppDelegate.swift */,
-				4CF8281722E8BE0D00D75784 /* Info.plist */,
 			);
-			path = PlayWithMe;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		4CF8282222E8DA4700D75784 /* Resources */ = {
@@ -196,12 +213,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C708C0322EA35650021B4B9 /* UITableViewController+ItemRowView.swift in Sources */,
 				4CA45C1222E9075600AB101C /* ChatListViewController.swift in Sources */,
 				4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */,
 				4CF8280C22E8BE0C00D75784 /* AppDelegate.swift in Sources */,
+				4C708BFD22EA30680021B4B9 /* Message.swift in Sources */,
 				5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */,
 				4CA45C1E22E91CBA00AB101C /* ChatItemRowView.swift in Sources */,
+				4C708BFC22EA30600021B4B9 /* Chat.swift in Sources */,
 				4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */,
+				4C708C0022EA33150021B4B9 /* ItemRowView.swift in Sources */,
+				4C708BFE22EA306A0021B4B9 /* User.swift in Sources */,
 				4CA45C1D22E91CBA00AB101C /* XIBView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SBSSF9BESA;
-				INFOPLIST_FILE = PlayWithMe/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SBSSF9BESA;
-				INFOPLIST_FILE = PlayWithMe/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
