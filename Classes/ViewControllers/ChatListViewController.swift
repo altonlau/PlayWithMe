@@ -1,14 +1,16 @@
 //
-//  SearchViewController.swift
+//  ChatListViewController.swift
 //  PlayWithMe
 //
-//  Created by Alton Lau on 7/25/19.
+//  Created by Alton Lau on 7/24/19.
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
 import UIKit
 
-class SearchViewController: UITableViewController {
+class ChatListViewController: UITableViewController {
+  
+  private let reuseIdentifier = "ChatCellIdentifier"
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 44
@@ -25,7 +27,11 @@ class SearchViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // Temporary until we get data
-    let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCellIdentifier", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+//    guard let chatRowItemView = itemRowView(for: cell) as? ChatItemRowView else {
+//      return cell
+//    }
+
     return cell
   }
   
