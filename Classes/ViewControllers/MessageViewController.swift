@@ -6,6 +6,7 @@
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import MessageKit
 import InputBarAccessoryView
@@ -29,8 +30,8 @@ class MessageViewController: MessagesViewController, PNObjectEventListener {
         
         let client: PubNub?
         let config = PNConfiguration(
-            publishKey: "pub-c-97d4b487-fd19-4f87-88cd-96d33d9e9978",
-            subscribeKey: "sub-c-ca14338c-af44-11e9-a577-e6e01a51e1d3"
+            publishKey: ProcessInfo.processInfo.environment["PUBLISH_KEY"] ?? "",
+            subscribeKey: ProcessInfo.processInfo.environment["SUBSCRIBE_KEY"] ?? ""
         )
         
         config.stripMobilePayload = false
