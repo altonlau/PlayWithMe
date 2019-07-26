@@ -24,7 +24,7 @@ class SearchViewController: UIViewController {
     joinedView.alpha = 0.0
     joinedView.isHidden = true
     joinedView.layer.cornerRadius = 4.0
-    joinedView.layer.borderColor = UIColor(red: 0.0/255.0, green: 196.0/255.0, blue: 187.0/255.0, alpha: 1.0).cgColor
+    joinedView.layer.borderColor = PWME_GREEN.cgColor
     joinedView.layer.borderWidth = 2.0
     joinedView.layer.masksToBounds = true
   }

@@ -6,10 +6,21 @@
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
+import UIKit
+
+
+// MARK: - Colors
+
+let PWME_GREEN: UIColor = UIColor(red: 0.0/255.0, green: 196.0/255.0, blue: 187.0/255.0, alpha: 1.0)
+let PWME_BLUE: UIColor = UIColor(red: 26.0/255.0, green: 98.0/255.0, blue: 192.0/255.0, alpha: 1.0)
+
+
 // MARK: - Storyboard Ids
+
 let MAIN_STORYBOARD = "Main"
 let MESSAGE_STORYBOARD_ID = "MessageStoryboardID"
 let ONBOARDING_STORYBOARD_ID = "OnboardingStoryboardID"
+
 
 // MARK: - SendBird Constants
 

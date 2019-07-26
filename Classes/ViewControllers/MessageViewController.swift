@@ -27,6 +27,7 @@ class MessageViewController: MessagesViewController {
     messagesCollectionView.messagesDisplayDelegate = self
     messagesCollectionView.messagesLayoutDelegate = self
     messageInputBar.delegate = self
+    messageInputBar.sendButton.configure { $0.setTitleColor(PWME_BLUE, for: .normal) }
     scrollsToBottomOnKeyboardBeginsEditing = true // default false
     maintainPositionOnKeyboardFrameChanged = true // default false
   }
@@ -46,6 +47,7 @@ class MessageViewController: MessagesViewController {
     SendBirdManager.shared.getAllMessages(for: chatRoom) { [weak self] messages in
       self?.messages = messages
       self?.messagesCollectionView.reloadData()
+      self?.messagesCollectionView.scrollToBottom()
     }
     navigationItem.title = chatRoom.name
   }
@@ -141,7 +143,7 @@ extension MessageViewController: MessagesDisplayDelegate {
   
   func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
     if isFromCurrentSender(message: message) {
-      return UIColor(red: 26.0/255.0, green: 98.0/255.0, blue: 192.0/255.0, alpha: 1.0)
+      return PWME_BLUE
     }
     return .white
   }
@@ -186,7 +188,7 @@ extension MessageViewController: SBDChannelDelegate {
   func channel(_ sender: SBDBaseChannel, didReceive message: SBDBaseMessage) {
     messages.append(Message(sbdMessage: message, messageId: "\(message.messageId)"))
     messagesCollectionView.reloadData()
-    messagesCollectionView.scrollToBottom()
+    messagesCollectionView.scrollToBottom(animated: true)
   }
 
 }
