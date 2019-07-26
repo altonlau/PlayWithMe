@@ -10,8 +10,8 @@ import UIKit
 
 class ImageLoader {
   
-  static func load(_ imageUrl: String, completion: @escaping ((_ image: UIImage?) -> Void)) {
-    guard let url = URL(string: imageUrl) else {
+  static func load(_ imageUrl: String?, completion: @escaping ((_ image: UIImage?) -> Void)) {
+    guard let imageUrl = imageUrl, let url = URL(string: imageUrl) else {
       completion(nil)
       return
     }

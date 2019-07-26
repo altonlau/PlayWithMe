@@ -6,7 +6,7 @@
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
-import Foundation
+import SendBirdSDK
 import UIKit
 
 @UIApplicationMain
@@ -15,9 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    // Change this to become a different person
-    let currentUserId = 1
-    SettingsManager.currentUser = MockLoader.loadUsers()[currentUserId]
+    // Setup SendBird
+    SBDMain.initWithApplicationId(Obfuscator().reveal(key: SENDBIRD_APP_ID))
     
     return true
   }

@@ -54,7 +54,7 @@ extension SearchViewController: UITableViewDataSource {
     if let searchItemRowView = tableView.itemRowView(for: cell) as? SearchItemRowView {
       let chatRoom = filteredChatRooms[indexPath.row]
       searchItemRowView.titleLabel.text = chatRoom.name
-      ImageLoader.load(chatRoom.imageUrl) { searchItemRowView.imageView.image = $0 }
+      ImageLoader.load(chatRoom.coverUrl) { searchItemRowView.imageView.image = $0 }
     }
     
     return cell

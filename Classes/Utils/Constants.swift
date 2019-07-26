@@ -6,6 +6,10 @@
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
+// MARK: - Storyboard Ids
+let MAIN_STORYBOARD = "Main"
+let ONBOARDING_STORYBOARD_ID = "OnboardingStoryboardID"
+
 // MARK: - SendBird Constants
 
 let SENDBIRD_APP_ID: [UInt8] = [113, 64, 70, 116, 33, 40, 35, 84, 76, 71, 84, 118, 102, 98, 86, 40, 39, 37, 89, 3, 69, 72, 125, 72, 84, 32, 81, 86, 76, 81, 124, 103, 121, 39, 95, 35]

@@ -6,13 +6,6 @@
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
-import Foundation
+import SendBirdSDK
 
-struct ChatRoom {
-  
-  let id: String
-  let name: String
-  let imageUrl: URL
-  let messages: [Message]
-  
-}
+typealias ChatRoom = SBDOpenChannel

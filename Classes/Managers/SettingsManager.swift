@@ -7,18 +7,15 @@
 //
 
 import Foundation
+import SendBirdSDK
 
 class SettingsManager {
   
-  private static let userKey = "user_key"
   private static let searchRadiusKey = "search_radius"
   
   static var currentUser: User? {
     get {
-      return UserDefaults.standard.dictionary(forKey: userKey).flatMap { User(json: $0) }
-    }
-    set {
-      UserDefaults.standard.set(newValue?.toDict(), forKey: userKey)
+      return SBDMain.getCurrentUser()
     }
   }
   

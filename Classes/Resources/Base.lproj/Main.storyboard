@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fsl-Ws-49C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SBc-kg-gr2">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="sfo-f3-jZ6">
             <objects>
-                <tabBarController id="SBc-kg-gr2" sceneMemberID="viewController">
+                <tabBarController id="SBc-kg-gr2" customClass="MainViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yoA-9o-I1t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="-626" y="-630"/>
         </scene>
-        <!--SearchViewController-->
+        <!--Search View Controller-->
         <scene sceneID="cWH-rZ-YJr">
             <objects>
-                <viewController title="SearchViewController" id="Cgi-nF-sUn" customClass="SearchViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Cgi-nF-sUn" customClass="SearchViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aPc-gM-EeN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="-1236.231884057971" y="97.767857142857139"/>
         </scene>
-        <!--ChatListViewController-->
+        <!--Chats-->
         <scene sceneID="k1V-6N-eR2">
             <objects>
-                <tableViewController title="ChatListViewController" id="zjf-C5-u2g" customClass="ChatListViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="zjf-C5-u2g" customClass="ChatListViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rWb-Q3-yUA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="-626" y="98"/>
         </scene>
-        <!--MessageViewController-->
+        <!--Message View Controller-->
         <scene sceneID="dh0-Kt-axm">
             <objects>
-                <viewController title="MessageViewController" id="fsl-Ws-49C" customClass="MessageViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fsl-Ws-49C" customClass="MessageViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kfH-Lc-rYL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="-843" y="848"/>
         </scene>
-        <!--SettingsViewController-->
+        <!--Settings View Controller-->
         <scene sceneID="TD1-xk-S8m">
             <objects>
-                <viewController title="SettingsViewController" id="16t-t1-zt5" customClass="SettingsViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="16t-t1-zt5" customClass="SettingsViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fi8-Ll-f60">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,6 +264,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7r-kk-dfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="97.767857142857139"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="12s-Rc-1ih">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingStoryboardID" id="yiT-g4-7ip" customClass="OnboardingViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IOB-EG-UPH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qdc-85-UQE">
+                                <rect key="frame" x="55.5" y="387" width="303" height="122"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Your Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tth-YX-der">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9M-6C-AZs">
+                                        <rect key="frame" x="0.0" y="51" width="303" height="33"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEu-4D-Pbh">
+                                        <rect key="frame" x="0.0" y="92" width="303" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="yiT-g4-7ip" eventType="touchUpInside" id="t0q-zX-V96"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qdc-85-UQE" firstAttribute="centerY" secondItem="IOB-EG-UPH" secondAttribute="centerY" id="747-CW-Kmd"/>
+                            <constraint firstItem="Qdc-85-UQE" firstAttribute="centerX" secondItem="IOB-EG-UPH" secondAttribute="centerX" id="t8b-qF-dlV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hi3-No-39c"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="w9M-6C-AZs" id="2mh-da-E6b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfm-g2-sU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="-1304"/>
         </scene>
     </scenes>
     <resources>

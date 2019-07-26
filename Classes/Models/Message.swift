@@ -8,18 +8,27 @@
 
 import Foundation
 import MessageKit
+import SendBirdSDK
 
 struct Message: MessageType {
   
-  let messageId: String
-  let sender: SenderType
-  let text: String
+  let sbdMessage: SBDUserMessage
   
+  var messageId: String
   var kind: MessageKind {
-    return .text(text)
+    guard let message = sbdMessage.message else {
+      fatalError()
+    }
+    return .text(message)
+  }
+  var sender: SenderType {
+    guard let sender = sbdMessage.sender else {
+      fatalError()
+    }
+    return sender
   }
   var sentDate: Date {
-    return Date()
+    return Date(timeIntervalSince1970: TimeInterval(sbdMessage.createdAt) / 1000)
   }
   
 }
