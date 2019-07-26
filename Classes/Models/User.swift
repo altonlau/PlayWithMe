@@ -7,40 +7,35 @@
 //
 
 import Foundation
-import CoreLocation
+import MessageKit
 
-struct User {
+struct User: SenderType {
   
-  let id: Int
+  let id: String
   let firstName: String
   let lastName: String
   
-  var chatIds: [Int]
-  var latitude: CLLocationDegrees?
-  var longitude: CLLocationDegrees?
-  var name: String {
+  var chatRoomIds: [Int]
+  var displayName: String {
     return "\(firstName) \(lastName)"
   }
-  var location: CLLocation? {
-    guard let latitude = latitude, let longitude = longitude else {
-      return nil
-    }
-    return CLLocation(latitude: latitude, longitude: longitude)
+  var senderId: String {
+    return id
   }
   
   init(json: [String : Any]) {
     guard
-      let id = json["user_id"] as? Int,
+      let id = json["user_id"] as? String,
       let firstName = json["first_name"] as? String,
       let lastName = json["last_name"] as? String,
-      let chatIds = json["chat_ids"] as? [Int] else {
+      let chatRoomIds = json["chat_room_ids"] as? [Int] else {
         fatalError()
     }
     
     self.id = id
     self.firstName = firstName
     self.lastName = lastName
-    self.chatIds = chatIds
+    self.chatRoomIds = chatRoomIds
   }
   
   func toDict() -> [String : Any] {
@@ -48,7 +43,7 @@ struct User {
       "user_id": id,
       "first_name": firstName,
       "last_name": lastName,
-      "chat_ids": chatIds
+      "chat_room_ids": chatRoomIds
     ]
   }
   
@@ -57,7 +52,7 @@ struct User {
 extension User: CustomStringConvertible {
   
   var description: String {
-    return "\(id): \(name) \(location?.description ?? "")"
+    return "\(id): \(displayName)"
   }
   
 }

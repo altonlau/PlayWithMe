@@ -1,2 +1,2 @@
 github "MessageKit/MessageKit"
-github "pubnub/objective-c" ~> 4.1  
+binary "CarthagePreBuilt.json"

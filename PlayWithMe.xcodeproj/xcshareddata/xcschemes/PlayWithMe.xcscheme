@@ -61,18 +61,6 @@
             ReferencedContainer = "container:PlayWithMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "SUBSCRIBE_KEY"
-            value = "sub-c-ca14338c-af44-11e9-a577-e6e01a51e1d3"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "PUBLISH_KEY"
-            value = "pub-c-97d4b487-fd19-4f87-88cd-96d33d9e9978"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

@@ -14,8 +14,8 @@ class SearchViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   private let reuseIdentifier = "SearchCellIdentifier"
-  private var chats: [Chat] = []
-  private var filteredChats: [Chat] = []
+  private var chatRooms: [ChatRoom] = []
+  private var filteredChatRooms: [ChatRoom] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,8 +32,8 @@ class SearchViewController: UIViewController {
   }
   
   private func setupData() {
-    chats = MockLoader.loadChats()
-    filteredChats = chats
+//    chats = MockLoader.loadChats()
+    filteredChatRooms = chatRooms
   }
   
 }
@@ -45,16 +45,16 @@ extension SearchViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return filteredChats.count
+    return filteredChatRooms.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
     
     if let searchItemRowView = tableView.itemRowView(for: cell) as? SearchItemRowView {
-      let chat = filteredChats[indexPath.row]
-      searchItemRowView.titleLabel.text = chat.name
-      ImageLoader.load(chat.imageUrl) { searchItemRowView.imageView.image = $0 }
+      let chatRoom = filteredChatRooms[indexPath.row]
+      searchItemRowView.titleLabel.text = chatRoom.name
+      ImageLoader.load(chatRoom.imageUrl) { searchItemRowView.imageView.image = $0 }
     }
     
     return cell
@@ -79,7 +79,7 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    filteredChats = searchText.isEmpty ? chats : chats.filter { $0.name.contains(searchText) }
+    filteredChatRooms = searchText.isEmpty ? chatRooms : chatRooms.filter { $0.name.contains(searchText) }
     tableView.reloadData()
   }
   

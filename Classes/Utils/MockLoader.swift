@@ -10,15 +10,7 @@ import Foundation
 
 class MockLoader {
   
-  private static let chatJson = Bundle.main.path(forResource: "chat_data", ofType: "json")
   private static let userJson = Bundle.main.path(forResource: "user_data", ofType: "json")
-  
-  static func loadChats() -> [Chat] {
-    guard let chats = chatJson.flatMap({ parseJson($0) }) as? [[String : Any]] else {
-      return []
-    }
-    return chats.map { Chat(json: $0) }
-  }
   
   static func loadUsers() -> [User] {
     guard let users = userJson.flatMap({ parseJson($0) }) as? [[String : Any]] else {

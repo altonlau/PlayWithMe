@@ -11,13 +11,11 @@
 		4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BF422EA18550021B4B9 /* SearchItemRowView.swift */; };
 		4C708BF822EA1D530021B4B9 /* SearchItemRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C708BF622EA1D530021B4B9 /* SearchItemRowView.xib */; };
 		4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BF922EA275E0021B4B9 /* SearchViewController.swift */; };
-		4C708BFC22EA30600021B4B9 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA222E901BB009C11E9 /* Chat.swift */; };
 		4C708BFD22EA30680021B4B9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA622E90429009C11E9 /* Message.swift */; };
 		4C708BFE22EA306A0021B4B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA422E90351009C11E9 /* User.swift */; };
 		4C708C0022EA33150021B4B9 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BFF22EA33150021B4B9 /* ItemRowView.swift */; };
 		4C708C0322EA35650021B4B9 /* UITableView+ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708C0222EA35650021B4B9 /* UITableView+ItemRowView.swift */; };
 		4C708C0622EA38AB0021B4B9 /* user_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C708C0522EA38AB0021B4B9 /* user_data.json */; };
-		4C708C0822EA3C430021B4B9 /* chat_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C708C0722EA3C430021B4B9 /* chat_data.json */; };
 		4C708C0E22EA42360021B4B9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708C0D22EA42360021B4B9 /* ImageLoader.swift */; };
 		4C708C1022EA452C0021B4B9 /* MockLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708C0F22EA452C0021B4B9 /* MockLoader.swift */; };
 		4CA45C0E22E8FC7B00AB101C /* ChatItemRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA45C0C22E8FC7B00AB101C /* ChatItemRowView.xib */; };
@@ -28,14 +26,14 @@
 		4CF8281322E8BE0D00D75784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281222E8BE0D00D75784 /* Assets.xcassets */; };
 		4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281422E8BE0D00D75784 /* LaunchScreen.storyboard */; };
 		4CF8282122E8DA3D00D75784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281F22E8DA3D00D75784 /* Main.storyboard */; };
-		5D423D0F22EA444700E0F122 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC42BA422E90351009C11E9 /* User.swift */; };
 		5D423D1122EA653C00E0F122 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */; };
-		5D423D1422EA68F000E0F122 /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1222EA68F000E0F122 /* MessageKit.framework */; };
-		5D423D1522EA68F000E0F122 /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */; };
-		5D423D1A22EA926F00E0F122 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D1922EA926F00E0F122 /* ChatService.swift */; };
-		5D423D1C22EA93C400E0F122 /* PubNub+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D1B22EA93C400E0F122 /* PubNub+Ext.swift */; };
-		5D423D1E22EA952100E0F122 /* PubNub+ChatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D1D22EA952100E0F122 /* PubNub+ChatProvider.swift */; };
 		5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7439F422E91C3F003845BC /* SettingsViewController.swift */; };
+		FACED03022EAC0F500DB5FCC /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED02F22EAC0F500DB5FCC /* ChatRoom.swift */; };
+		FACED03422EAC87C00DB5FCC /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */; };
+		FACED03522EAC87C00DB5FCC /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1222EA68F000E0F122 /* MessageKit.framework */; };
+		FACED03622EAC87C00DB5FCC /* SendBirdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACED03122EAC85100DB5FCC /* SendBirdSDK.framework */; };
+		FACED03822EAC89800DB5FCC /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED03722EAC89800DB5FCC /* Obfuscator.swift */; };
+		FACED03A22EAC99100DB5FCC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED03922EAC99100DB5FCC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +45,6 @@
 		4C708BFF22EA33150021B4B9 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		4C708C0222EA35650021B4B9 /* UITableView+ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ItemRowView.swift"; sourceTree = "<group>"; };
 		4C708C0522EA38AB0021B4B9 /* user_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_data.json; sourceTree = "<group>"; };
-		4C708C0722EA3C430021B4B9 /* chat_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chat_data.json; sourceTree = "<group>"; };
 		4C708C0D22EA42360021B4B9 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4C708C0F22EA452C0021B4B9 /* MockLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoader.swift; sourceTree = "<group>"; };
 		4CA45C0D22E8FC7B00AB101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChatItemRowView.xib; sourceTree = "<group>"; };
@@ -63,13 +60,13 @@
 		5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		5D423D1222EA68F000E0F122 /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
 		5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
-		5D423D1922EA926F00E0F122 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
-		5D423D1B22EA93C400E0F122 /* PubNub+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PubNub+Ext.swift"; sourceTree = "<group>"; };
-		5D423D1D22EA952100E0F122 /* PubNub+ChatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PubNub+ChatProvider.swift"; sourceTree = "<group>"; };
 		5D7439F422E91C3F003845BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		5DC42BA222E901BB009C11E9 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Classes/Models/Chat.swift; sourceTree = SOURCE_ROOT; };
 		5DC42BA422E90351009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/Models/User.swift; sourceTree = SOURCE_ROOT; };
 		5DC42BA622E90429009C11E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Classes/Models/Message.swift; sourceTree = SOURCE_ROOT; };
+		FACED02F22EAC0F500DB5FCC /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		FACED03122EAC85100DB5FCC /* SendBirdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SendBirdSDK.framework; path = Carthage/Build/iOS/SendBirdSDK.framework; sourceTree = "<group>"; };
+		FACED03722EAC89800DB5FCC /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
+		FACED03922EAC99100DB5FCC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D423D1422EA68F000E0F122 /* MessageKit.framework in Frameworks */,
-				5D423D1522EA68F000E0F122 /* InputBarAccessoryView.framework in Frameworks */,
+				FACED03422EAC87C00DB5FCC /* InputBarAccessoryView.framework in Frameworks */,
+				FACED03522EAC87C00DB5FCC /* MessageKit.framework in Frameworks */,
+				FACED03622EAC87C00DB5FCC /* SendBirdSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,13 +86,12 @@
 		4C708C0122EA35500021B4B9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FACED03922EAC99100DB5FCC /* Constants.swift */,
 				4C708C0D22EA42360021B4B9 /* ImageLoader.swift */,
-				5D423D1922EA926F00E0F122 /* ChatService.swift */,
+				FACED03722EAC89800DB5FCC /* Obfuscator.swift */,
 				4C708C0F22EA452C0021B4B9 /* MockLoader.swift */,
 				4C037E5C22EA770C00D0315B /* SettingsManager.swift */,
 				4C708C0222EA35650021B4B9 /* UITableView+ItemRowView.swift */,
-				5D423D1B22EA93C400E0F122 /* PubNub+Ext.swift */,
-				5D423D1D22EA952100E0F122 /* PubNub+ChatProvider.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -102,7 +99,6 @@
 		4C708C0422EA38AB0021B4B9 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				4C708C0722EA3C430021B4B9 /* chat_data.json */,
 				4C708C0522EA38AB0021B4B9 /* user_data.json */,
 			);
 			path = Mocks;
@@ -167,9 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				4CA45C1122E9075600AB101C /* ChatListViewController.swift */,
+				5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */,
 				4C708BF922EA275E0021B4B9 /* SearchViewController.swift */,
 				5D7439F422E91C3F003845BC /* SettingsViewController.swift */,
-				5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +173,7 @@
 		5820EC2CC617D42C4FD8B7A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FACED03122EAC85100DB5FCC /* SendBirdSDK.framework */,
 				5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */,
 				5D423D1222EA68F000E0F122 /* MessageKit.framework */,
 				144B2BA4562E73A5C4D0D44F /* libPods-PlayWithMe.a */,
@@ -187,7 +184,7 @@
 		5DC42BA822E90A07009C11E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5DC42BA222E901BB009C11E9 /* Chat.swift */,
+				FACED02F22EAC0F500DB5FCC /* ChatRoom.swift */,
 				5DC42BA622E90429009C11E9 /* Message.swift */,
 				5DC42BA422E90351009C11E9 /* User.swift */,
 			);
@@ -204,7 +201,7 @@
 				4CF8280422E8BE0C00D75784 /* Sources */,
 				4CF8280522E8BE0C00D75784 /* Frameworks */,
 				4CF8280622E8BE0C00D75784 /* Resources */,
-				5D423D1622EA6AE700E0F122 /* ShellScript */,
+				5D423D1622EA6AE700E0F122 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -258,7 +255,6 @@
 				4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */,
 				4CA45C0E22E8FC7B00AB101C /* ChatItemRowView.xib in Resources */,
 				4C708BF822EA1D530021B4B9 /* SearchItemRowView.xib in Resources */,
-				4C708C0822EA3C430021B4B9 /* chat_data.json in Resources */,
 				4C708C0622EA38AB0021B4B9 /* user_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +262,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5D423D1622EA6AE700E0F122 /* ShellScript */ = {
+		5D423D1622EA6AE700E0F122 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,17 +272,20 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/InputBarAccessoryView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MessageKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PubNub.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SendBirdSDK.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/InputBarAccessoryView.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MessageKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SendBirdSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -295,26 +294,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACED03822EAC89800DB5FCC /* Obfuscator.swift in Sources */,
+				FACED03022EAC0F500DB5FCC /* ChatRoom.swift in Sources */,
 				4CF8280C22E8BE0C00D75784 /* AppDelegate.swift in Sources */,
-				4C708BFC22EA30600021B4B9 /* Chat.swift in Sources */,
 				4CA45C1E22E91CBA00AB101C /* ChatItemRowView.swift in Sources */,
 				4CA45C1222E9075600AB101C /* ChatListViewController.swift in Sources */,
 				4C708C0E22EA42360021B4B9 /* ImageLoader.swift in Sources */,
 				4C708C0022EA33150021B4B9 /* ItemRowView.swift in Sources */,
 				4C708BFD22EA30680021B4B9 /* Message.swift in Sources */,
-				5D423D1A22EA926F00E0F122 /* ChatService.swift in Sources */,
 				4C708C1022EA452C0021B4B9 /* MockLoader.swift in Sources */,
 				4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */,
 				4C037E5D22EA770C00D0315B /* SettingsManager.swift in Sources */,
 				4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */,
 				5D423D1122EA653C00E0F122 /* MessageViewController.swift in Sources */,
-				5D423D1E22EA952100E0F122 /* PubNub+ChatProvider.swift in Sources */,
 				5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */,
 				4C708C0322EA35650021B4B9 /* UITableView+ItemRowView.swift in Sources */,
 				4C708BFE22EA306A0021B4B9 /* User.swift in Sources */,
-				5D423D1C22EA93C400E0F122 /* PubNub+Ext.swift in Sources */,
 				4CA45C1D22E91CBA00AB101C /* XIBView.swift in Sources */,
-				5D423D0F22EA444700E0F122 /* User.swift in Sources */,
+				FACED03A22EAC99100DB5FCC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +411,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -469,7 +466,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -479,7 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SBSSF9BESA;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -500,7 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SBSSF9BESA;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    nameTextField.text = SettingsManager.currentUser?.name
+    nameTextField.text = SettingsManager.currentUser?.displayName
   }
   
   @IBAction func radiusSliderChanged(_ sender: UISlider) {
