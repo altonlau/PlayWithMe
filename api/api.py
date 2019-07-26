@@ -43,5 +43,5 @@ def get_message(message_id):
   result = json.loads(connection.getresponse().read())
   print result['results']
 
-get_message(2)
+
 
