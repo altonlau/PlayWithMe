@@ -32,6 +32,9 @@
 		5D423D1122EA653C00E0F122 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */; };
 		5D423D1422EA68F000E0F122 /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1222EA68F000E0F122 /* MessageKit.framework */; };
 		5D423D1522EA68F000E0F122 /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */; };
+		5D423D1A22EA926F00E0F122 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D1922EA926F00E0F122 /* ChatService.swift */; };
+		5D423D1C22EA93C400E0F122 /* PubNub+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D1B22EA93C400E0F122 /* PubNub+Ext.swift */; };
+		5D423D1E22EA952100E0F122 /* PubNub+ChatProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D1D22EA952100E0F122 /* PubNub+ChatProvider.swift */; };
 		5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7439F422E91C3F003845BC /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,9 @@
 		5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		5D423D1222EA68F000E0F122 /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
 		5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
+		5D423D1922EA926F00E0F122 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		5D423D1B22EA93C400E0F122 /* PubNub+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PubNub+Ext.swift"; sourceTree = "<group>"; };
+		5D423D1D22EA952100E0F122 /* PubNub+ChatProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PubNub+ChatProvider.swift"; sourceTree = "<group>"; };
 		5D7439F422E91C3F003845BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5DC42BA222E901BB009C11E9 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Classes/Models/Chat.swift; sourceTree = SOURCE_ROOT; };
 		5DC42BA422E90351009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/Models/User.swift; sourceTree = SOURCE_ROOT; };
@@ -83,9 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				4C708C0D22EA42360021B4B9 /* ImageLoader.swift */,
+				5D423D1922EA926F00E0F122 /* ChatService.swift */,
 				4C708C0F22EA452C0021B4B9 /* MockLoader.swift */,
 				4C037E5C22EA770C00D0315B /* SettingsManager.swift */,
 				4C708C0222EA35650021B4B9 /* UITableView+ItemRowView.swift */,
+				5D423D1B22EA93C400E0F122 /* PubNub+Ext.swift */,
+				5D423D1D22EA952100E0F122 /* PubNub+ChatProvider.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,6 +276,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/InputBarAccessoryView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MessageKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PubNub.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -292,14 +302,17 @@
 				4C708C0E22EA42360021B4B9 /* ImageLoader.swift in Sources */,
 				4C708C0022EA33150021B4B9 /* ItemRowView.swift in Sources */,
 				4C708BFD22EA30680021B4B9 /* Message.swift in Sources */,
+				5D423D1A22EA926F00E0F122 /* ChatService.swift in Sources */,
 				4C708C1022EA452C0021B4B9 /* MockLoader.swift in Sources */,
 				4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */,
 				4C037E5D22EA770C00D0315B /* SettingsManager.swift in Sources */,
 				4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */,
 				5D423D1122EA653C00E0F122 /* MessageViewController.swift in Sources */,
+				5D423D1E22EA952100E0F122 /* PubNub+ChatProvider.swift in Sources */,
 				5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */,
 				4C708C0322EA35650021B4B9 /* UITableView+ItemRowView.swift in Sources */,
 				4C708BFE22EA306A0021B4B9 /* User.swift in Sources */,
+				5D423D1C22EA93C400E0F122 /* PubNub+Ext.swift in Sources */,
 				4CA45C1D22E91CBA00AB101C /* XIBView.swift in Sources */,
 				5D423D0F22EA444700E0F122 /* User.swift in Sources */,
 			);
@@ -466,7 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SBSSF9BESA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -487,7 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SBSSF9BESA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

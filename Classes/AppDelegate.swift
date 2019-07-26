@@ -6,6 +6,7 @@
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 @UIApplicationMain
