@@ -6,12 +6,11 @@
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-  var window: UIWindow?
-
+    var window: UIWindow?
 }
 

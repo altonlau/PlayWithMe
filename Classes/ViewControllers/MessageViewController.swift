@@ -9,6 +9,7 @@
 import UIKit
 import MessageKit
 import InputBarAccessoryView
+import PubNub
 
 var messages: [Message] = [Message(
     member: Member(name: "bluemoon", color: .blue),
@@ -16,7 +17,7 @@ var messages: [Message] = [Message(
     messageId: "123")]
 var member: Member!
 
-class MessageViewController: MessagesViewController {
+class MessageViewController: MessagesViewController, PNObjectEventListener {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,25 @@ class MessageViewController: MessagesViewController {
         configureMessageInputBar()
         messagesCollectionView.messagesDisplayDelegate = self
         messagesCollectionView.messagesLayoutDelegate = self
+        
+        let client: PubNub?
+        let config = PNConfiguration(
+            publishKey: "pub-c-97d4b487-fd19-4f87-88cd-96d33d9e9978",
+            subscribeKey: "sub-c-ca14338c-af44-11e9-a577-e6e01a51e1d3"
+        )
+        
+        config.stripMobilePayload = false
+        client = PubNub.clientWithConfiguration(config)
+        client?.addListener(self)
+        
+        client?.timeWithCompletion({(result,status) -> Void in
+            if status == nil {
+                client?.publish("Hello From Swift SDK", toChannel: "pubnub_onboarding_channel") {
+                    (status) in
+                    print("I published with: \(status.debugDescription)")
+                }
+            }
+        })
     }
 
     func configureMessageCollectionView() {
