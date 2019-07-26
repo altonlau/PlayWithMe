@@ -49,6 +49,7 @@ class SendBirdManager {
       return
     }
     query.includeEmptyChannel = true
+    query.includeMemberList = true
     query.publicMembershipFilter = .all
 
     DispatchQueue.global().async {
@@ -78,6 +79,16 @@ class SendBirdManager {
           completion(groupChannels ?? [])
         }
       })
+    }
+  }
+  
+  func getNonJoinedChatRooms(_ completion: @escaping ((_ chatRooms: [ChatRoom]) -> Void)) {
+    getAllChatRooms { [weak self] chatRooms in
+      guard let self = self else {
+        completion(chatRooms)
+        return
+      }
+      completion(chatRooms.filter { !(($0.members as? [User])?.map { $0.userId }.contains(self.currentUser.userId) ?? false) })
     }
   }
 
