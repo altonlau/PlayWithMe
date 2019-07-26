@@ -8,6 +8,7 @@
 
 // MARK: - Storyboard Ids
 let MAIN_STORYBOARD = "Main"
+let MESSAGE_STORYBOARD_ID = "MessageStoryboardID"
 let ONBOARDING_STORYBOARD_ID = "OnboardingStoryboardID"
 
 // MARK: - SendBird Constants

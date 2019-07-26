@@ -17,7 +17,7 @@
 		4C708C0322EA35650021B4B9 /* UITableView+ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708C0222EA35650021B4B9 /* UITableView+ItemRowView.swift */; };
 		4C708C0E22EA42360021B4B9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708C0D22EA42360021B4B9 /* ImageLoader.swift */; };
 		4CA45C0E22E8FC7B00AB101C /* ChatItemRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA45C0C22E8FC7B00AB101C /* ChatItemRowView.xib */; };
-		4CA45C1222E9075600AB101C /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA45C1122E9075600AB101C /* ChatListViewController.swift */; };
+		4CA45C1222E9075600AB101C /* ChatRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA45C1122E9075600AB101C /* ChatRoomsViewController.swift */; };
 		4CA45C1D22E91CBA00AB101C /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA45C1B22E91CBA00AB101C /* XIBView.swift */; };
 		4CA45C1E22E91CBA00AB101C /* ChatItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA45C1C22E91CBA00AB101C /* ChatItemRowView.swift */; };
 		4CF8280C22E8BE0C00D75784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8280B22E8BE0C00D75784 /* AppDelegate.swift */; };
@@ -47,7 +47,7 @@
 		4C708C0222EA35650021B4B9 /* UITableView+ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ItemRowView.swift"; sourceTree = "<group>"; };
 		4C708C0D22EA42360021B4B9 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4CA45C0D22E8FC7B00AB101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChatItemRowView.xib; sourceTree = "<group>"; };
-		4CA45C1122E9075600AB101C /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		4CA45C1122E9075600AB101C /* ChatRoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsViewController.swift; sourceTree = "<group>"; };
 		4CA45C1B22E91CBA00AB101C /* XIBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
 		4CA45C1C22E91CBA00AB101C /* ChatItemRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemRowView.swift; sourceTree = "<group>"; };
 		4CF8280822E8BE0C00D75784 /* PlayWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +154,7 @@
 		4CF8282322E8DA5600D75784 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4CA45C1122E9075600AB101C /* ChatListViewController.swift */,
+				4CA45C1122E9075600AB101C /* ChatRoomsViewController.swift */,
 				FACED03F22EAD94600DB5FCC /* MainViewController.swift */,
 				5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */,
 				FACED04122EADA3000DB5FCC /* OnboardingViewController.swift */,
@@ -306,7 +306,7 @@
 			files = (
 				4CF8280C22E8BE0C00D75784 /* AppDelegate.swift in Sources */,
 				4CA45C1E22E91CBA00AB101C /* ChatItemRowView.swift in Sources */,
-				4CA45C1222E9075600AB101C /* ChatListViewController.swift in Sources */,
+				4CA45C1222E9075600AB101C /* ChatRoomsViewController.swift in Sources */,
 				FACED03022EAC0F500DB5FCC /* ChatRoom.swift in Sources */,
 				FACED03E22EACEBC00DB5FCC /* ChatRoomManager.swift in Sources */,
 				FACED03A22EAC99100DB5FCC /* Constants.swift in Sources */,

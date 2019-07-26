@@ -17,11 +17,10 @@ class SearchViewController: UIViewController {
   private var chatRooms: [ChatRoom] = []
   private var filteredChatRooms: [ChatRoom] = []
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
-    setupData()
-    tableView.reloadData()
+    refresh()
   }
   
   @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
@@ -31,12 +30,30 @@ class SearchViewController: UIViewController {
     }
   }
   
-  private func setupData() {
-//    chats = MockLoader.loadChats()
-    filteredChatRooms = chatRooms
+  private func refresh() {
+    if searchBar.isFirstResponder {
+      searchBar.resignFirstResponder()
+    }
+    searchBar.text = nil
+    
+    ChatRoomManager.shared.getAll() { [weak self] chatRooms in
+      self?.chatRooms = chatRooms
+      self?.filteredChatRooms = chatRooms
+      self?.tableView.reloadData()
+    }
   }
   
 }
+
+extension SearchViewController: UISearchBarDelegate {
+  
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    filteredChatRooms = searchText.isEmpty ? chatRooms : chatRooms.filter { $0.name.contains(searchText) }
+    tableView.reloadData()
+  }
+  
+}
+
 
 extension SearchViewController: UITableViewDataSource {
   
@@ -53,7 +70,9 @@ extension SearchViewController: UITableViewDataSource {
     
     if let searchItemRowView = tableView.itemRowView(for: cell) as? SearchItemRowView {
       let chatRoom = filteredChatRooms[indexPath.row]
+      
       searchItemRowView.titleLabel.text = chatRoom.name
+      searchItemRowView.setJoinedTap { chatRoom.join() }
       ImageLoader.load(chatRoom.coverUrl) { searchItemRowView.imageView.image = $0 }
     }
     
@@ -66,21 +85,6 @@ extension SearchViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 44
-  }
-  
-  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-    if searchBar.isFirstResponder {
-      searchBar.resignFirstResponder()
-    }
-  }
-  
-}
-
-extension SearchViewController: UISearchBarDelegate {
-  
-  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    filteredChatRooms = searchText.isEmpty ? chatRooms : chatRooms.filter { $0.name.contains(searchText) }
-    tableView.reloadData()
   }
   
 }

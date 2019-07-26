@@ -14,6 +14,10 @@ class ChatRoomManager {
   static let shared: ChatRoomManager = ChatRoomManager()
   
   func getAll(_ completion: @escaping ((_ chatRooms: [ChatRoom]) -> Void)) {
+    getAll(with: nil, completion: completion)
+  }
+  
+  func getAll(with user: User?, completion: @escaping ((_ chatRooms: [ChatRoom]) -> Void)) {
     guard let query = ChatRoom.createOpenChannelListQuery() else {
       completion([])
       return
@@ -26,8 +30,15 @@ class ChatRoomManager {
             print(error.localizedDescription)
             completion([])
           }
-          
-          completion(openChannels ?? [])
+          if let user = user {
+            guard let participatingChannels = user.metaData?[User.participatingMetaKey]?.components(separatedBy: ",") else {
+              completion([])
+              return
+            }
+            completion(openChannels?.filter { participatingChannels.contains($0.channelUrl) } ?? [])
+          } else {
+            completion(openChannels ?? [])
+          }
         }
       })
     }
