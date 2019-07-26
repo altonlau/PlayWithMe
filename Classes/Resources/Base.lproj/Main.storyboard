@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFSportsNightUpright.ttf">
+            <string>SFSportsNightUpright</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="sfo-f3-jZ6">
@@ -18,6 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.1019607843" green="0.38431372549999998" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="Cgi-nF-sUn" kind="relationship" relationship="viewControllers" id="5aP-qi-j7D"/>
@@ -38,12 +46,21 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60P-hn-TRy">
                                 <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <color key="backgroundColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="SFSportsNight" family="SF Sports Night" pointSize="17"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="SFSportsNightUpright" family="SF Sports Night Upright" pointSize="25"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Search" id="jEe-JR-DFI"/>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="uiH-Rp-YFn">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type something..." translatesAutoresizingMaskIntoConstraints="NO" id="uiH-Rp-YFn">
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                 <connections>
                                     <outlet property="delegate" destination="Cgi-nF-sUn" id="Kws-ts-E4w"/>
@@ -84,7 +101,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uiH-Rp-YFn" firstAttribute="trailing" secondItem="SGf-dp-s8h" secondAttribute="trailing" id="6VT-JO-gAI"/>
@@ -128,14 +145,20 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-vh-XxL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <color key="barTintColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="SFSportsNightUpright" family="SF Sports Night Upright" pointSize="26"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Chat Rooms" id="rga-ze-k3i">
                                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="58z-z1-oIQ">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="refreshButtonPressed:" destination="51v-km-vQX" id="LSj-if-YVY"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5IO-QV-yfk">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="addButtonPressed:" destination="51v-km-vQX" id="BGy-ND-YdO"/>
                                             </connections>
@@ -181,7 +204,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DG3-vh-XxL" firstAttribute="top" secondItem="rs0-I0-jjt" secondAttribute="top" id="8Mc-RD-dPq"/>
                             <constraint firstAttribute="trailing" secondItem="DG3-vh-XxL" secondAttribute="trailing" id="Cnd-6Q-4Rw"/>
@@ -226,34 +249,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qdc-85-UQE">
-                                <rect key="frame" x="55.5" y="387" width="303" height="122"/>
+                                <rect key="frame" x="54.5" y="399" width="305.5" height="98"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Your Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tth-YX-der">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="43"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tth-YX-der">
+                                        <rect key="frame" x="0.0" y="0.0" width="305.5" height="23"/>
+                                        <fontDescription key="fontDescription" name="SFSportsNightUpright" family="SF Sports Night Upright" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9M-6C-AZs">
-                                        <rect key="frame" x="0.0" y="51" width="303" height="33"/>
+                                        <rect key="frame" x="0.0" y="31" width="305.5" height="33"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEu-4D-Pbh">
-                                        <rect key="frame" x="0.0" y="92" width="303" height="30"/>
-                                        <state key="normal" title="Done"/>
+                                        <rect key="frame" x="0.0" y="72" width="305.5" height="26"/>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.38431372549019605" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="SFSportsNightUpright" family="SF Sports Night Upright" pointSize="17"/>
+                                        <state key="normal" title="Let's go!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="saveButtonPressed:" destination="yiT-g4-7ip" eventType="touchUpInside" id="t0q-zX-V96"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlayWithMe" translatesAutoresizingMaskIntoConstraints="NO" id="dKX-Cq-SQr">
+                                <rect key="frame" x="141" y="184" width="132" height="115"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Qdc-85-UQE" firstAttribute="centerY" secondItem="IOB-EG-UPH" secondAttribute="centerY" id="747-CW-Kmd"/>
+                            <constraint firstItem="Tth-YX-der" firstAttribute="top" secondItem="dKX-Cq-SQr" secondAttribute="bottom" constant="100" id="D4n-TZ-qd9"/>
                             <constraint firstItem="Qdc-85-UQE" firstAttribute="centerX" secondItem="IOB-EG-UPH" secondAttribute="centerX" id="t8b-qF-dlV"/>
+                            <constraint firstItem="dKX-Cq-SQr" firstAttribute="centerX" secondItem="hi3-No-39c" secondAttribute="centerX" id="vsW-kO-5Nn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hi3-No-39c"/>
                     </view>
@@ -267,6 +300,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PlayWithMe" width="132" height="115"/>
         <image name="chat_filled_icon" width="30" height="30"/>
         <image name="chat_icon" width="30" height="30"/>
     </resources>

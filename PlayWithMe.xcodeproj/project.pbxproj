@@ -24,6 +24,8 @@
 		4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281422E8BE0D00D75784 /* LaunchScreen.storyboard */; };
 		4CF8282122E8DA3D00D75784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281F22E8DA3D00D75784 /* Main.storyboard */; };
 		5D423D1122EA653C00E0F122 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */; };
+		5D423D2D22EB816B00E0F122 /* SFSportsNight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D423D2C22EB816700E0F122 /* SFSportsNight.ttf */; };
+		5D423D2F22EB8D0B00E0F122 /* SFSportsNightUpright.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D423D2E22EB8D0B00E0F122 /* SFSportsNightUpright.ttf */; };
 		FACED03022EAC0F500DB5FCC /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED02F22EAC0F500DB5FCC /* ChatRoom.swift */; };
 		FACED03422EAC87C00DB5FCC /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */; };
 		FACED03522EAC87C00DB5FCC /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1222EA68F000E0F122 /* MessageKit.framework */; };
@@ -56,6 +58,8 @@
 		5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		5D423D1222EA68F000E0F122 /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
 		5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
+		5D423D2C22EB816700E0F122 /* SFSportsNight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFSportsNight.ttf; sourceTree = "<group>"; };
+		5D423D2E22EB8D0B00E0F122 /* SFSportsNightUpright.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFSportsNightUpright.ttf; sourceTree = "<group>"; };
 		5DC42BA422E90351009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/Models/User.swift; sourceTree = SOURCE_ROOT; };
 		5DC42BA622E90429009C11E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Classes/Models/Message.swift; sourceTree = SOURCE_ROOT; };
 		FACED02F22EAC0F500DB5FCC /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		4CF8280A22E8BE0C00D75784 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5D423D2B22EB813700E0F122 /* Fonts */,
 				FACED03C22EACB5D00DB5FCC /* Extensions */,
 				FACED03B22EACB4A00DB5FCC /* Managers */,
 				5DC42BA822E90A07009C11E9 /* Models */,
@@ -168,6 +173,15 @@
 				144B2BA4562E73A5C4D0D44F /* libPods-PlayWithMe.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D423D2B22EB813700E0F122 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5D423D2E22EB8D0B00E0F122 /* SFSportsNightUpright.ttf */,
+				5D423D2C22EB816700E0F122 /* SFSportsNight.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		5DC42BA822E90A07009C11E9 /* Models */ = {
@@ -255,9 +269,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D423D2F22EB8D0B00E0F122 /* SFSportsNightUpright.ttf in Resources */,
 				4CF8281322E8BE0D00D75784 /* Assets.xcassets in Resources */,
 				4CF8282122E8DA3D00D75784 /* Main.storyboard in Resources */,
 				4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */,
+				5D423D2D22EB816B00E0F122 /* SFSportsNight.ttf in Resources */,
 				4CA45C0E22E8FC7B00AB101C /* ChatItemRowView.xib in Resources */,
 				4C708BF822EA1D530021B4B9 /* SearchItemRowView.xib in Resources */,
 			);

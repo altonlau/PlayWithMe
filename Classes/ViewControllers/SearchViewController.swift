@@ -17,6 +17,9 @@ class SearchViewController: UIViewController {
   private var chatRooms: [ChatRoom] = []
   private var filteredChatRooms: [ChatRoom] = []
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
