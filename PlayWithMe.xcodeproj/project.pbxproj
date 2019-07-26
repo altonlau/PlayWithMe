@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C037E5D22EA770C00D0315B /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C037E5C22EA770C00D0315B /* SettingsManager.swift */; };
 		4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BF422EA18550021B4B9 /* SearchItemRowView.swift */; };
 		4C708BF822EA1D530021B4B9 /* SearchItemRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C708BF622EA1D530021B4B9 /* SearchItemRowView.xib */; };
 		4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BF922EA275E0021B4B9 /* SearchViewController.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		144B2BA4562E73A5C4D0D44F /* libPods-PlayWithMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlayWithMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C037E5C22EA770C00D0315B /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		4C708BF422EA18550021B4B9 /* SearchItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemRowView.swift; sourceTree = "<group>"; };
 		4C708BF722EA1D530021B4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchItemRowView.xib; sourceTree = "<group>"; };
 		4C708BF922EA275E0021B4B9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				4C708C0D22EA42360021B4B9 /* ImageLoader.swift */,
 				4C708C0F22EA452C0021B4B9 /* MockLoader.swift */,
+				4C037E5C22EA770C00D0315B /* SettingsManager.swift */,
 				4C708C0222EA35650021B4B9 /* UITableView+ItemRowView.swift */,
 			);
 			path = Utils;
@@ -291,6 +294,7 @@
 				4C708BFD22EA30680021B4B9 /* Message.swift in Sources */,
 				4C708C1022EA452C0021B4B9 /* MockLoader.swift in Sources */,
 				4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */,
+				4C037E5D22EA770C00D0315B /* SettingsManager.swift in Sources */,
 				4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */,
 				5D423D1122EA653C00E0F122 /* MessageViewController.swift in Sources */,
 				5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */,

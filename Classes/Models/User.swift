@@ -14,14 +14,17 @@ struct User {
   let id: Int
   let firstName: String
   let lastName: String
-  let latitude: CLLocationDegrees
-  let longitude: CLLocationDegrees
   
   var chatIds: [Int]
+  var latitude: CLLocationDegrees?
+  var longitude: CLLocationDegrees?
   var name: String {
     return "\(firstName) \(lastName)"
   }
-  var location: CLLocation {
+  var location: CLLocation? {
+    guard let latitude = latitude, let longitude = longitude else {
+      return nil
+    }
     return CLLocation(latitude: latitude, longitude: longitude)
   }
   
@@ -30,8 +33,6 @@ struct User {
       let id = json["user_id"] as? Int,
       let firstName = json["first_name"] as? String,
       let lastName = json["last_name"] as? String,
-      let latitude = json["latitude"] as? Double,
-      let longitude = json["longitude"] as? Double,
       let chatIds = json["chat_ids"] as? [Int] else {
         fatalError()
     }
@@ -39,9 +40,16 @@ struct User {
     self.id = id
     self.firstName = firstName
     self.lastName = lastName
-    self.latitude = CLLocationDegrees(floatLiteral: latitude)
-    self.longitude = CLLocationDegrees(floatLiteral: longitude)
     self.chatIds = chatIds
+  }
+  
+  func toDict() -> [String : Any] {
+    return [
+      "user_id": id,
+      "first_name": firstName,
+      "last_name": lastName,
+      "chat_ids": chatIds
+    ]
   }
   
 }
@@ -49,7 +57,7 @@ struct User {
 extension User: CustomStringConvertible {
   
   var description: String {
-    return "\(id): \(name) \(location)"
+    return "\(id): \(name) \(location?.description ?? "")"
   }
   
 }
