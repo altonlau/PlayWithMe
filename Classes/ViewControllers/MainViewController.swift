@@ -19,6 +19,8 @@ class MainViewController: UITabBarController {
       onboardingController.modalPresentationStyle = .fullScreen
       present(onboardingController, animated: true, completion: nil)
     }
+    
+    tabBar.unselectedItemTintColor = .white
   }
   
 }
