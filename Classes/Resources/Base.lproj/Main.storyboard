@@ -36,15 +36,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60P-hn-TRy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <items>
+                                    <navigationItem title="Search" id="jEe-JR-DFI"/>
+                                </items>
+                            </navigationBar>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="uiH-Rp-YFn">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                 <connections>
                                     <outlet property="delegate" destination="Cgi-nF-sUn" id="Kws-ts-E4w"/>
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G13-h9-Uqs">
-                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="52" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -82,11 +88,14 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uiH-Rp-YFn" firstAttribute="trailing" secondItem="SGf-dp-s8h" secondAttribute="trailing" id="6VT-JO-gAI"/>
-                            <constraint firstAttribute="bottom" secondItem="G13-h9-Uqs" secondAttribute="bottom" id="Jnj-77-8YI"/>
+                            <constraint firstItem="uiH-Rp-YFn" firstAttribute="top" secondItem="60P-hn-TRy" secondAttribute="bottom" id="F9y-Py-mji"/>
+                            <constraint firstItem="60P-hn-TRy" firstAttribute="top" secondItem="SGf-dp-s8h" secondAttribute="top" id="GH4-BB-wEo"/>
                             <constraint firstItem="uiH-Rp-YFn" firstAttribute="leading" secondItem="SGf-dp-s8h" secondAttribute="leading" id="L8H-Xc-sEE"/>
+                            <constraint firstItem="60P-hn-TRy" firstAttribute="leading" secondItem="SGf-dp-s8h" secondAttribute="leading" id="PMy-k4-7mG"/>
                             <constraint firstItem="G13-h9-Uqs" firstAttribute="leading" secondItem="SGf-dp-s8h" secondAttribute="leading" id="QW2-W1-7ru"/>
+                            <constraint firstItem="60P-hn-TRy" firstAttribute="trailing" secondItem="SGf-dp-s8h" secondAttribute="trailing" id="Xof-Vh-Zzb"/>
                             <constraint firstItem="G13-h9-Uqs" firstAttribute="top" secondItem="uiH-Rp-YFn" secondAttribute="bottom" id="cXr-ha-gzg"/>
-                            <constraint firstItem="uiH-Rp-YFn" firstAttribute="top" secondItem="SGf-dp-s8h" secondAttribute="top" id="jJf-uG-JJ6"/>
+                            <constraint firstItem="SGf-dp-s8h" firstAttribute="bottom" secondItem="G13-h9-Uqs" secondAttribute="bottom" id="fHe-pn-8XZ"/>
                             <constraint firstItem="G13-h9-Uqs" firstAttribute="trailing" secondItem="SGf-dp-s8h" secondAttribute="trailing" id="oBR-kO-BZR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SGf-dp-s8h"/>
@@ -107,7 +116,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-930" y="98"/>
+            <point key="canvasLocation" x="-930.43478260869574" y="97.767857142857139"/>
         </scene>
         <!--Chats-->
         <scene sceneID="UbZ-TL-tZm">
@@ -117,10 +126,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-vh-XxL">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-vh-XxL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                                 <items>
-                                    <navigationItem id="rga-ze-k3i">
+                                    <navigationItem title="Chat Rooms" id="rga-ze-k3i">
                                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="58z-z1-oIQ">
                                             <connections>
                                                 <action selector="refreshButtonPressed:" destination="51v-km-vQX" id="LSj-if-YVY"/>
@@ -135,7 +144,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-Ip-XIh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="52" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -161,6 +170,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="oTG-49-pOC" secondAttribute="bottom" id="dAv-H4-wfI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fsl-Ws-49C" kind="show" id="C9M-ja-CgT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -172,11 +184,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DG3-vh-XxL" firstAttribute="top" secondItem="rs0-I0-jjt" secondAttribute="top" id="8Mc-RD-dPq"/>
-                            <constraint firstAttribute="bottom" secondItem="ifg-Ip-XIh" secondAttribute="bottom" id="9zG-4V-H1d"/>
                             <constraint firstAttribute="trailing" secondItem="DG3-vh-XxL" secondAttribute="trailing" id="Cnd-6Q-4Rw"/>
                             <constraint firstItem="ifg-Ip-XIh" firstAttribute="top" secondItem="DG3-vh-XxL" secondAttribute="bottom" id="GcC-tA-fy9"/>
                             <constraint firstItem="ifg-Ip-XIh" firstAttribute="trailing" secondItem="rs0-I0-jjt" secondAttribute="trailing" id="IJj-5U-op4"/>
                             <constraint firstItem="DG3-vh-XxL" firstAttribute="leading" secondItem="rs0-I0-jjt" secondAttribute="leading" id="NdW-7x-2Pr"/>
+                            <constraint firstItem="rs0-I0-jjt" firstAttribute="bottom" secondItem="ifg-Ip-XIh" secondAttribute="bottom" id="RwF-z4-M3d"/>
                             <constraint firstItem="ifg-Ip-XIh" firstAttribute="leading" secondItem="rs0-I0-jjt" secondAttribute="leading" id="tsD-da-n4i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rs0-I0-jjt"/>
@@ -203,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzd-0r-Fgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-843" y="848"/>
+            <point key="canvasLocation" x="-626" y="826"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="12s-Rc-1ih">

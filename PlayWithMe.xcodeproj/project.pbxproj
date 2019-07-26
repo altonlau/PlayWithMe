@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C037E5D22EA770C00D0315B /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C037E5C22EA770C00D0315B /* SettingsManager.swift */; };
 		4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BF422EA18550021B4B9 /* SearchItemRowView.swift */; };
 		4C708BF822EA1D530021B4B9 /* SearchItemRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C708BF622EA1D530021B4B9 /* SearchItemRowView.xib */; };
 		4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C708BF922EA275E0021B4B9 /* SearchViewController.swift */; };
@@ -25,21 +24,19 @@
 		4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281422E8BE0D00D75784 /* LaunchScreen.storyboard */; };
 		4CF8282122E8DA3D00D75784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281F22E8DA3D00D75784 /* Main.storyboard */; };
 		5D423D1122EA653C00E0F122 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */; };
-		5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7439F422E91C3F003845BC /* SettingsViewController.swift */; };
 		FACED03022EAC0F500DB5FCC /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED02F22EAC0F500DB5FCC /* ChatRoom.swift */; };
 		FACED03422EAC87C00DB5FCC /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */; };
 		FACED03522EAC87C00DB5FCC /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D423D1222EA68F000E0F122 /* MessageKit.framework */; };
 		FACED03622EAC87C00DB5FCC /* SendBirdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACED03122EAC85100DB5FCC /* SendBirdSDK.framework */; };
 		FACED03822EAC89800DB5FCC /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED03722EAC89800DB5FCC /* Obfuscator.swift */; };
 		FACED03A22EAC99100DB5FCC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED03922EAC99100DB5FCC /* Constants.swift */; };
-		FACED03E22EACEBC00DB5FCC /* ChatRoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED03D22EACEBC00DB5FCC /* ChatRoomManager.swift */; };
+		FACED03E22EACEBC00DB5FCC /* SendBirdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED03D22EACEBC00DB5FCC /* SendBirdManager.swift */; };
 		FACED04022EAD94600DB5FCC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED03F22EAD94600DB5FCC /* MainViewController.swift */; };
 		FACED04222EADA3000DB5FCC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACED04122EADA3000DB5FCC /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		144B2BA4562E73A5C4D0D44F /* libPods-PlayWithMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlayWithMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C037E5C22EA770C00D0315B /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		4C708BF422EA18550021B4B9 /* SearchItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemRowView.swift; sourceTree = "<group>"; };
 		4C708BF722EA1D530021B4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchItemRowView.xib; sourceTree = "<group>"; };
 		4C708BF922EA275E0021B4B9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -59,14 +56,13 @@
 		5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		5D423D1222EA68F000E0F122 /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
 		5D423D1322EA68F000E0F122 /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
-		5D7439F422E91C3F003845BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5DC42BA422E90351009C11E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/Models/User.swift; sourceTree = SOURCE_ROOT; };
 		5DC42BA622E90429009C11E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Classes/Models/Message.swift; sourceTree = SOURCE_ROOT; };
 		FACED02F22EAC0F500DB5FCC /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		FACED03122EAC85100DB5FCC /* SendBirdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SendBirdSDK.framework; path = Carthage/Build/iOS/SendBirdSDK.framework; sourceTree = "<group>"; };
 		FACED03722EAC89800DB5FCC /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		FACED03922EAC99100DB5FCC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		FACED03D22EACEBC00DB5FCC /* ChatRoomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomManager.swift; sourceTree = "<group>"; };
+		FACED03D22EACEBC00DB5FCC /* SendBirdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendBirdManager.swift; sourceTree = "<group>"; };
 		FACED03F22EAD94600DB5FCC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FACED04122EADA3000DB5FCC /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +155,6 @@
 				5D423D0B22EA3DF900E0F122 /* MessageViewController.swift */,
 				FACED04122EADA3000DB5FCC /* OnboardingViewController.swift */,
 				4C708BF922EA275E0021B4B9 /* SearchViewController.swift */,
-				5D7439F422E91C3F003845BC /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,8 +183,7 @@
 		FACED03B22EACB4A00DB5FCC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				FACED03D22EACEBC00DB5FCC /* ChatRoomManager.swift */,
-				4C037E5C22EA770C00D0315B /* SettingsManager.swift */,
+				FACED03D22EACEBC00DB5FCC /* SendBirdManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -308,7 +302,7 @@
 				4CA45C1E22E91CBA00AB101C /* ChatItemRowView.swift in Sources */,
 				4CA45C1222E9075600AB101C /* ChatRoomsViewController.swift in Sources */,
 				FACED03022EAC0F500DB5FCC /* ChatRoom.swift in Sources */,
-				FACED03E22EACEBC00DB5FCC /* ChatRoomManager.swift in Sources */,
+				FACED03E22EACEBC00DB5FCC /* SendBirdManager.swift in Sources */,
 				FACED03A22EAC99100DB5FCC /* Constants.swift in Sources */,
 				4C708C0E22EA42360021B4B9 /* ImageLoader.swift in Sources */,
 				4C708C0022EA33150021B4B9 /* ItemRowView.swift in Sources */,
@@ -319,8 +313,6 @@
 				FACED04222EADA3000DB5FCC /* OnboardingViewController.swift in Sources */,
 				4C708BF522EA18550021B4B9 /* SearchItemRowView.swift in Sources */,
 				4C708BFA22EA275E0021B4B9 /* SearchViewController.swift in Sources */,
-				4C037E5D22EA770C00D0315B /* SettingsManager.swift in Sources */,
-				5D7439F522E91C3F003845BC /* SettingsViewController.swift in Sources */,
 				4C708C0322EA35650021B4B9 /* UITableView+ItemRowView.swift in Sources */,
 				4C708BFE22EA306A0021B4B9 /* User.swift in Sources */,
 				4CA45C1D22E91CBA00AB101C /* XIBView.swift in Sources */,

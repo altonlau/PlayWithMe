@@ -12,17 +12,17 @@ import SendBirdSDK
 
 struct Message: MessageType {
   
-  let sbdMessage: SBDUserMessage
+  let sbdMessage: SBDBaseMessage
   
   var messageId: String
   var kind: MessageKind {
-    guard let message = sbdMessage.message else {
+    guard let message = (sbdMessage as? SBDUserMessage)?.message else {
       fatalError()
     }
     return .text(message)
   }
   var sender: SenderType {
-    guard let sender = sbdMessage.sender else {
+    guard let sender = (sbdMessage as? SBDUserMessage)?.sender else {
       fatalError()
     }
     return sender

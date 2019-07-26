@@ -13,7 +13,7 @@ class MainViewController: UITabBarController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    if SettingsManager.currentUser == nil {
+    if !SendBirdManager.shared.isLoggedIn {
       let storyboard = UIStoryboard(name: MAIN_STORYBOARD, bundle: nil)
       let onboardingController = storyboard.instantiateViewController(withIdentifier: ONBOARDING_STORYBOARD_ID)
       onboardingController.modalPresentationStyle = .fullScreen

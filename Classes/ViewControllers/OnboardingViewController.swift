@@ -22,9 +22,6 @@ class OnboardingViewController: UIViewController {
         print(error.localizedDescription)
         fatalError()
       }
-      if SettingsManager.currentUser == nil {
-        fatalError()
-      }
       self?.dismiss(animated: true, completion: nil)
     }
   }
