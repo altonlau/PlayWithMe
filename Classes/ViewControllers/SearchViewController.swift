@@ -39,7 +39,7 @@ class SearchViewController: UIViewController {
     }
     searchBar.text = nil
 
-    SendBirdManager.shared.getAllChatRooms() { [weak self] chatRooms in
+    SendBirdManager.shared.getNonJoinedChatRooms() { [weak self] chatRooms in
       self?.chatRooms = chatRooms
       self?.filteredChatRooms = chatRooms
       self?.tableView.reloadData()

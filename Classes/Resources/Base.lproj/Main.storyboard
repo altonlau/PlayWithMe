@@ -160,7 +160,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5IO-QV-yfk">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <action selector="addButtonPressed:" destination="51v-km-vQX" id="BGy-ND-YdO"/>
+                                                <segue destination="c2s-JG-Y2M" kind="presentation" modalPresentationStyle="overCurrentContext" id="iUV-wM-DmX"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -238,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzd-0r-Fgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626" y="826"/>
+            <point key="canvasLocation" x="-622" y="826"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="12s-Rc-1ih">
@@ -297,6 +297,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfm-g2-sU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-626" y="-1304"/>
+        </scene>
+        <!--Create Pick Up View Controller-->
+        <scene sceneID="wbv-lA-FIT">
+            <objects>
+                <viewController id="c2s-JG-Y2M" customClass="CreatePickUpViewController" customModule="PlayWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wNO-q5-Oe9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U42-1X-wWs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="40i-y6-nOY" appends="YES" id="iob-Q4-2zA"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-Ir-FYa">
+                                <rect key="frame" x="16" y="248" width="382" height="400"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-fd-BPq">
+                                        <rect key="frame" x="16" y="170" width="350" height="60"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwE-Ja-r7D">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INM-0j-dRl">
+                                                <rect key="frame" x="0.0" y="30" width="350" height="30"/>
+                                                <state key="normal" title="Create"/>
+                                                <connections>
+                                                    <action selector="createButtonPressed:" destination="c2s-JG-Y2M" eventType="touchUpInside" id="yaK-3h-hIi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AEX-fd-BPq" firstAttribute="centerY" secondItem="Xrr-Ir-FYa" secondAttribute="centerY" id="0e5-3Q-035"/>
+                                    <constraint firstItem="AEX-fd-BPq" firstAttribute="leading" secondItem="Xrr-Ir-FYa" secondAttribute="leading" constant="16" id="EY0-yD-Llo"/>
+                                    <constraint firstAttribute="trailing" secondItem="AEX-fd-BPq" secondAttribute="trailing" constant="16" id="For-0H-lgc"/>
+                                    <constraint firstAttribute="height" constant="400" id="h2Z-CY-ttg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="U42-1X-wWs" secondAttribute="trailing" id="2c6-tG-AOz"/>
+                            <constraint firstItem="U42-1X-wWs" firstAttribute="leading" secondItem="wNO-q5-Oe9" secondAttribute="leading" id="4Ar-yk-4rJ"/>
+                            <constraint firstAttribute="bottom" secondItem="U42-1X-wWs" secondAttribute="bottom" id="8pd-wN-tR8"/>
+                            <constraint firstItem="W8h-QK-PhK" firstAttribute="trailing" secondItem="Xrr-Ir-FYa" secondAttribute="trailing" constant="16" id="NnH-nV-TBy"/>
+                            <constraint firstItem="Xrr-Ir-FYa" firstAttribute="leading" secondItem="W8h-QK-PhK" secondAttribute="leading" constant="16" id="OW2-im-TJh"/>
+                            <constraint firstItem="Xrr-Ir-FYa" firstAttribute="centerY" secondItem="wNO-q5-Oe9" secondAttribute="centerY" id="fhI-hM-IXK"/>
+                            <constraint firstItem="U42-1X-wWs" firstAttribute="top" secondItem="wNO-q5-Oe9" secondAttribute="top" id="l95-HJ-moC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W8h-QK-PhK"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Xrr-Ir-FYa" id="fgT-Dq-AgI"/>
+                        <outlet property="nameTextField" destination="pwE-Ja-r7D" id="c3n-lc-pZe"/>
+                        <outlet property="overlayView" destination="U42-1X-wWs" id="HUt-CM-2Eq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vbg-WB-x9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="40i-y6-nOY">
+                    <connections>
+                        <action selector="viewTapped:" destination="c2s-JG-Y2M" id="Apl-eb-Osf"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-13" y="826"/>
         </scene>
     </scenes>
     <resources>

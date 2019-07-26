@@ -19,7 +19,7 @@ extension User: SenderType {
   }
 
   public var displayName: String {
-    return nickname ?? userId
+    return userId
   }
 
 }

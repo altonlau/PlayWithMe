@@ -6,6 +6,7 @@
 //  Copyright © 2019 Yelp Inc. All rights reserved.
 //
 
+import SendBirdSDK
 import UIKit
 
 class ChatRoomsViewController: UIViewController {
@@ -15,10 +16,10 @@ class ChatRoomsViewController: UIViewController {
   private let reuseIdentifier = "ChatCellIdentifier"
 
   private var chatRooms: [ChatRoom] = []
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
     refresh()
   }
 
@@ -30,13 +31,6 @@ class ChatRoomsViewController: UIViewController {
       return
     }
     messageViewController.chatRoom = chatRooms[selectedIndex]
-  }
-
-  @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-    SendBirdManager.shared.createChatRoom("Tennis - Dolores") { chatRoom in
-      // TODO: Set MessageViewController.chatRoom
-      // TODO: Push to MessageViewController
-    }
   }
 
   @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
@@ -70,10 +64,7 @@ extension ChatRoomsViewController: UITableViewDataSource {
     if let chatRowItemView = tableView.itemRowView(for: cell) as? ChatItemRowView {
       let chatRoom = chatRooms[indexPath.row]
       chatRowItemView.titleLabel.text = chatRoom.name
-      chatRowItemView.subtitleLabel.text = nil
-      chatRoom.getMembers { users in
-        chatRowItemView.subtitleLabel.text = users.map { $0.displayName }.joined(separator: ", ")
-      }
+      chatRowItemView.subtitleLabel.text = (chatRoom.lastMessage as? SBDUserMessage)?.message
       ImageLoader.load(chatRoom.coverUrl) { chatRowItemView.imageView.image = $0 }
     }
 
