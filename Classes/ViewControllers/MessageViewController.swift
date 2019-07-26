@@ -47,7 +47,7 @@ class MessageViewController: MessagesViewController {
     SendBirdManager.shared.getAllMessages(for: chatRoom) { [weak self] messages in
       self?.messages = messages
       self?.messagesCollectionView.reloadData()
-      self?.messagesCollectionView.scrollToBottom()
+      self?.messagesCollectionView.scrollToBottom(animated: true)
     }
     navigationItem.title = chatRoom.name
   }

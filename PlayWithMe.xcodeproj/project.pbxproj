@@ -20,6 +20,7 @@
 		4CA45C1D22E91CBA00AB101C /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA45C1B22E91CBA00AB101C /* XIBView.swift */; };
 		4CA45C1E22E91CBA00AB101C /* ChatItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA45C1C22E91CBA00AB101C /* ChatItemRowView.swift */; };
 		4CC7EA8B22EB8453002530CF /* CreatePickUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7EA8A22EB8453002530CF /* CreatePickUpViewController.swift */; };
+		4CC7EA8E22EBABAD002530CF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7EA8D22EBABAD002530CF /* RoundedButton.swift */; };
 		4CF8280C22E8BE0C00D75784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8280B22E8BE0C00D75784 /* AppDelegate.swift */; };
 		4CF8281322E8BE0D00D75784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281222E8BE0D00D75784 /* Assets.xcassets */; };
 		4CF8281622E8BE0D00D75784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8281422E8BE0D00D75784 /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 		4CA45C1B22E91CBA00AB101C /* XIBView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
 		4CA45C1C22E91CBA00AB101C /* ChatItemRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemRowView.swift; sourceTree = "<group>"; };
 		4CC7EA8A22EB8453002530CF /* CreatePickUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePickUpViewController.swift; sourceTree = "<group>"; };
+		4CC7EA8D22EBABAD002530CF /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		4CF8280822E8BE0C00D75784 /* PlayWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF8280B22E8BE0C00D75784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CF8281222E8BE0D00D75784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4CC7EA8C22EBABA2002530CF /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				4CC7EA8D22EBABAD002530CF /* RoundedButton.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		4CF827FF22E8BE0C00D75784 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		4CF8280A22E8BE0C00D75784 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4CC7EA8C22EBABA2002530CF /* Controls */,
 				5D423D2B22EB813700E0F122 /* Fonts */,
 				FACED03C22EACB5D00DB5FCC /* Extensions */,
 				FACED03B22EACB4A00DB5FCC /* Managers */,
@@ -328,6 +339,7 @@
 				FACED04022EAD94600DB5FCC /* MainViewController.swift in Sources */,
 				4CC7EA8B22EB8453002530CF /* CreatePickUpViewController.swift in Sources */,
 				4C708BFD22EA30680021B4B9 /* Message.swift in Sources */,
+				4CC7EA8E22EBABAD002530CF /* RoundedButton.swift in Sources */,
 				5D423D1122EA653C00E0F122 /* MessageViewController.swift in Sources */,
 				FACED03822EAC89800DB5FCC /* Obfuscator.swift in Sources */,
 				FACED04222EADA3000DB5FCC /* OnboardingViewController.swift in Sources */,

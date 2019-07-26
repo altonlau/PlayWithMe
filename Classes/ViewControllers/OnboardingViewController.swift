@@ -14,13 +14,13 @@ class OnboardingViewController: UIViewController {
   @IBOutlet weak var nameTextField: UITextField!
   
   @IBAction func saveButtonPressed(_ sender: UIButton) {
-    guard let name = nameTextField.text else {
+    guard let name = nameTextField.text?.capitalized.trimmingCharacters(in: .whitespacesAndNewlines) else {
       return
     }
     SBDMain.connect(withUserId: name) { [weak self] (user, error) in
       if let error = error {
         print(error.localizedDescription)
-        fatalError()
+        return
       }
       self?.dismiss(animated: true, completion: nil)
     }
