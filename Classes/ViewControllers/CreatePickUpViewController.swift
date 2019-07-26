@@ -23,7 +23,7 @@ class CreatePickUpViewController: UIViewController {
     super.viewWillAppear(animated)
     
     UIView.animate(withDuration: 0.2) { [weak self] in
-      self?.overlayView.alpha = 0.2
+      self?.overlayView.alpha = 0.5
     }
   }
   

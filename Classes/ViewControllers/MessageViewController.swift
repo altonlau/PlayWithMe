@@ -30,7 +30,11 @@ class MessageViewController: MessagesViewController {
     scrollsToBottomOnKeyboardBeginsEditing = true // default false
     maintainPositionOnKeyboardFrameChanged = true // default false
   }
-
+  
+  @IBAction func closeButtonPressed(_ sender: Any) {
+    navigationController?.dismiss(animated: true, completion: nil)
+  }
+  
   private func setup() {
     SBDMain.removeAllChannelDelegates()
     guard let chatRoom = chatRoom else {
@@ -43,6 +47,7 @@ class MessageViewController: MessagesViewController {
       self?.messages = messages
       self?.messagesCollectionView.reloadData()
     }
+    navigationItem.title = chatRoom.name
   }
 
 }

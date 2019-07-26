@@ -35,7 +35,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFr-34-4QT">
                             <rect key="frame" x="52" y="0.0" width="310" height="44"/>
-                            <fontDescription key="fontDescription" name="SFSportsNightUpright" family="SF Sports Night Upright" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="SFSportsNightUpright" family="SF Sports Night Upright" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -43,14 +43,14 @@
                             <rect key="frame" x="370" y="0.0" width="44" height="44"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n2-pn-ldn">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="14"/>
-                                    <fontDescription key="fontDescription" name="SFSportsNight" family="SF Sports Night" pointSize="13"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="12.5"/>
+                                    <fontDescription key="fontDescription" name="SFSportsNight" family="SF Sports Night" pointSize="11"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyS-JI-jcf">
-                                    <rect key="frame" x="0.0" y="14" width="44" height="30"/>
-                                    <fontDescription key="fontDescription" name="SFSportsNight" family="SF Sports Night" pointSize="14"/>
+                                    <rect key="frame" x="0.0" y="12.5" width="44" height="31.5"/>
+                                    <fontDescription key="fontDescription" name="SFSportsNight" family="SF Sports Night" pointSize="13"/>
                                     <state key="normal" title="Join">
                                         <color key="titleColor" red="0.1019607843" green="0.38431372549999998" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </state>

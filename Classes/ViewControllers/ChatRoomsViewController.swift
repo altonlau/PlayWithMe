@@ -25,7 +25,7 @@ class ChatRoomsViewController: UIViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard
-      let messageViewController = segue.destination as? MessageViewController,
+      let messageViewController = (segue.destination as? UINavigationController)?.topViewController as? MessageViewController,
       let selectedIndex = tableView.indexPathForSelectedRow?.row else {
       // TODO: Abort the segue from happening
       return
