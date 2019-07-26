@@ -9,17 +9,25 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+  
+  @IBOutlet weak var joinedView: UIView!
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
 
   private let reuseIdentifier = "SearchCellIdentifier"
   private var chatRooms: [ChatRoom] = []
   private var filteredChatRooms: [ChatRoom] = []
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    joinedView.alpha = 0.0
+    joinedView.isHidden = true
+    joinedView.layer.cornerRadius = 4.0
+    joinedView.layer.borderColor = UIColor.gray.cgColor
+    joinedView.layer.borderWidth = 2.0
   }
+
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
@@ -30,6 +38,19 @@ class SearchViewController: UIViewController {
     let location = sender.location(in: view)
     if searchBar.isFirstResponder && !searchBar.frame.contains(location) {
       searchBar.resignFirstResponder()
+    }
+  }
+  
+  private func animateJoined() {
+    joinedView.isHidden = false
+    UIView.animate(withDuration: 0.2, animations: { [weak self] in
+      self?.joinedView.alpha = 1.0
+    }) { _ in
+      UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: { [weak self] in
+        self?.joinedView.alpha = 0.0
+      }, completion: { [weak self] _ in
+        self?.joinedView.isHidden = true
+      })
     }
   }
 
@@ -75,7 +96,11 @@ extension SearchViewController: UITableViewDataSource {
       let chatRoom = filteredChatRooms[indexPath.row]
 
       searchItemRowView.titleLabel.text = chatRoom.name
-      searchItemRowView.setJoinedTap { chatRoom.join() }
+      searchItemRowView.setJoinedTap { [weak self] in
+        chatRoom.join()
+        self?.animateJoined()
+        self?.refresh()
+      }
       ImageLoader.load(chatRoom.coverUrl) { searchItemRowView.imageView.image = $0 }
     }
 

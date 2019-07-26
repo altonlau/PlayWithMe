@@ -100,11 +100,30 @@
                                     <outlet property="delegate" destination="Cgi-nF-sUn" id="moi-Bh-znq"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cs5-Sk-U50">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ycM-nC-qGD">
+                                        <rect key="frame" x="16" y="16" width="68" height="68"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0O3-CW-Qh2"/>
+                                    <constraint firstAttribute="trailing" secondItem="ycM-nC-qGD" secondAttribute="trailing" constant="16" id="Ajd-JL-RT7"/>
+                                    <constraint firstItem="ycM-nC-qGD" firstAttribute="leading" secondItem="cs5-Sk-U50" secondAttribute="leading" constant="16" id="EqE-K5-j5E"/>
+                                    <constraint firstAttribute="bottom" secondItem="ycM-nC-qGD" secondAttribute="bottom" constant="16" id="M81-O1-vhM"/>
+                                    <constraint firstAttribute="width" constant="100" id="bnd-IK-50a"/>
+                                    <constraint firstItem="ycM-nC-qGD" firstAttribute="top" secondItem="cs5-Sk-U50" secondAttribute="top" constant="16" id="o8T-Kw-z81"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="cs5-Sk-U50" firstAttribute="centerY" secondItem="aPc-gM-EeN" secondAttribute="centerY" id="6Mg-OT-ReX"/>
                             <constraint firstItem="uiH-Rp-YFn" firstAttribute="trailing" secondItem="SGf-dp-s8h" secondAttribute="trailing" id="6VT-JO-gAI"/>
+                            <constraint firstItem="cs5-Sk-U50" firstAttribute="centerX" secondItem="aPc-gM-EeN" secondAttribute="centerX" id="6zA-Qh-xpT"/>
                             <constraint firstItem="uiH-Rp-YFn" firstAttribute="top" secondItem="60P-hn-TRy" secondAttribute="bottom" id="F9y-Py-mji"/>
                             <constraint firstItem="60P-hn-TRy" firstAttribute="top" secondItem="SGf-dp-s8h" secondAttribute="top" id="GH4-BB-wEo"/>
                             <constraint firstItem="uiH-Rp-YFn" firstAttribute="leading" secondItem="SGf-dp-s8h" secondAttribute="leading" id="L8H-Xc-sEE"/>
@@ -122,6 +141,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="jZD-N0-GIj"/>
                     <connections>
+                        <outlet property="joinedView" destination="cs5-Sk-U50" id="cZI-gO-53y"/>
                         <outlet property="searchBar" destination="uiH-Rp-YFn" id="v6K-bQ-ZHX"/>
                         <outlet property="tableView" destination="G13-h9-Uqs" id="DI4-sl-Hea"/>
                     </connections>
@@ -376,5 +396,6 @@
         <image name="PlayWithMe" width="132" height="115"/>
         <image name="chat_filled_icon" width="30" height="30"/>
         <image name="chat_icon" width="30" height="30"/>
+        <image name="check_icon" width="170.5" height="170.5"/>
     </resources>
 </document>
