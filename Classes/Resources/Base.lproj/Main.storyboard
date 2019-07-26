@@ -165,7 +165,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-vh-XxL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                                <color key="barTintColor" red="0.0" green="0.76698678731918335" blue="0.73372524976730347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.76862745098039209" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <fontDescription key="fontDescription" name="SFSportsNightUpright" family="SF Sports Night Upright" pointSize="24"/>
                                 </textAttributes>
@@ -281,6 +281,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OEy-5X-RaJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="3nm-Lw-q3S">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="closeButtonPressed:" destination="fsl-Ws-49C" id="2VJ-5F-ZcE"/>
                             </connections>

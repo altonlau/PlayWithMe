@@ -138,12 +138,28 @@ extension MessageViewController: MessagesDataSource {
 // MARK: - MessagesDisplayDelegate
 
 extension MessageViewController: MessagesDisplayDelegate {
+  
+  func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
+    if isFromCurrentSender(message: message) {
+      return UIColor(red: 26.0/255.0, green: 98.0/255.0, blue: 192.0/255.0, alpha: 1.0)
+    }
+    return .white
+  }
 
   func configureAvatarView(_ avatarView: AvatarView,
                            for message: MessageType,
                            at indexPath: IndexPath,
                            in messagesCollectionView: MessagesCollectionView) {
-    avatarView.backgroundColor = .blue
+    guard let imageUrl = (message.sender as? User)?.profileUrl else {
+      return
+    }
+    ImageLoader.load(imageUrl) { image in
+      avatarView.image = image
+    }
+  }
+  
+  func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
+    return .bubbleOutline(isFromCurrentSender(message: message) ? .clear : .lightGray)
   }
 
 }
