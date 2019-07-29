@@ -286,6 +286,12 @@
                                 <action selector="closeButtonPressed:" destination="fsl-Ws-49C" id="2VJ-5F-ZcE"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="m0h-3o-Fbs">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="fsl-Ws-49C" id="bCY-C7-4ec"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzd-0r-Fgt" userLabel="First Responder" sceneMemberID="firstResponder"/>

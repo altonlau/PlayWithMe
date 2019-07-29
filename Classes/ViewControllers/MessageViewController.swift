@@ -32,8 +32,17 @@ class MessageViewController: MessagesViewController {
     maintainPositionOnKeyboardFrameChanged = true // default false
   }
   
-  @IBAction func closeButtonPressed(_ sender: Any) {
+  @IBAction func closeButtonPressed(_ sender: UIBarButtonItem) {
     navigationController?.dismiss(animated: true, completion: nil)
+  }
+  
+  @IBAction func deleteButtonPressed(_ sender: UIBarButtonItem) {
+    chatRoom?.leave(completionHandler: { [weak self] error in
+      if let error = error {
+        print(error.localizedDescription)
+      }
+      self?.closeButtonPressed(sender)
+    })
   }
   
   private func setup() {
